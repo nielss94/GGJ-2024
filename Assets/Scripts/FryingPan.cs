@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FryingPan : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class FryingPan : MonoBehaviour
     [SerializeField] private Canvas canvas;
     private Camera mainCamera;
 
+    [SerializeField] private Image fryingImage;
     [SerializeField] private Sprite fryingSprite;
     [SerializeField] private Sprite readySprite;
     
@@ -26,7 +28,7 @@ public class FryingPan : MonoBehaviour
         canvas.worldCamera = mainCamera;
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (currentSnack == null && other.gameObject.TryGetComponent(out Projectile projectile) && projectile.isFrozen)
         {
@@ -63,6 +65,7 @@ public class FryingPan : MonoBehaviour
                 snackReady = true;
             }
         }
+        
     }
 
     public void TakeSnack()

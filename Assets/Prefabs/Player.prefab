@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 742180951972632036}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6580687, y: 0.29000008, z: -0.07700786}
+  m_LocalPosition: {x: 1.028, y: 1.948, z: 0.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 3669116751320777073}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.677, y: -0.471, z: 0}
+  m_LocalPosition: {x: 1.132, y: 0.701, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 4701696778390002750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.775, y: -0.471, z: 0}
+  m_LocalPosition: {x: 1.23, y: 0.701, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -136,9 +136,9 @@ GameObject:
   - component: {fileID: 5104151920145423022}
   - component: {fileID: 7971975782169863154}
   - component: {fileID: 7225613891139768193}
-  - component: {fileID: 7958924632120190471}
   - component: {fileID: 5635167414217733239}
   - component: {fileID: 7067313152492972070}
+  - component: {fileID: 5331263841689348790}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -242,22 +242,6 @@ CapsuleCollider:
   m_Height: 2.74
   m_Direction: 1
   m_Center: {x: 0, y: 1.12, z: 0}
---- !u!114 &7958924632120190471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5846278617479036072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5c1be34802c4fa9b1dcff38c09992a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnSpeedInSeconds: 0.5
-  orientation: 0
-  canRotateDuringTurn: 0
-  rotating: 0
 --- !u!114 &5635167414217733239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,14 +254,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da801c22c6054850b495534066ac550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  virtualCamera: {fileID: 0}
+  thrower: {fileID: 6980001116275478327}
   cameraTarget: {fileID: 6313633654697963667}
-  playerTurn: {fileID: 7958924632120190471}
-  lookMinXRotation: -30
-  lookMaxXRotation: 30
-  kitchenLookMinYRotation: 90
-  kitchenLookMaxYRotation: 270
-  snackbarLookMinYRotation: -45
-  snackbarLookMaxYRotation: 45
+  defaultCameraDistance: 3
+  aimCameraDistance: 2.5
+  shootCameraDistance: 2.5
+  cameraDistanceChangeSpeed: 0.5
+  lookMinXRotation: -45
+  lookMaxXRotation: 45
 --- !u!114 &7067313152492972070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,6 +283,19 @@ MonoBehaviour:
     type: 3}
   friedSnackPrefab: {fileID: -5918806489714501144, guid: 23ae0c13a32474982880c4b269246922,
     type: 3}
+--- !u!114 &5331263841689348790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5846278617479036072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f654384ba63c14db48ec5a9348c65e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &6369376832029999373
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,11 +345,10 @@ MonoBehaviour:
   projectilePrefab: {fileID: 4577001284826150381, guid: 43731e5d6d82fbb47a824ddb7ee0b472,
     type: 3}
   projectileSpawn: {fileID: 6726633704712270510}
-  projectileLookAtOffset: {x: 0, y: 0.5, z: 0}
-  maxThrowForce: 30
-  minThrowForce: 0
+  maxThrowForce: 15
+  minThrowForce: 5
   throwForce: 0
-  throwForceRampSpeed: 40
+  throwForceRampSpeed: 4
   projector: {fileID: 99816930549950883}
   playerInventory: {fileID: 7067313152492972070}
 --- !u!114 &99816930549950883

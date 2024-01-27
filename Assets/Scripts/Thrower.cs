@@ -31,7 +31,7 @@ public class Thrower : MonoBehaviour
         
         inputActionAsset.Ingame.Aim.started += ctx =>
         {
-            if (playerInventory.HoldingFriedSnack)
+            if (playerInventory.HoldingFriedSnack || playerInventory.HoldingFrozenSnack)
             {
                 OnStartAim();
             }
@@ -45,7 +45,7 @@ public class Thrower : MonoBehaviour
         inputActionAsset.Ingame.Shoot.canceled += OnShoot;
         inputActionAsset.Ingame.Shoot.started += ctx =>
         {
-            if (playerInventory.HoldingFriedSnack)
+            if (playerInventory.HoldingFriedSnack || playerInventory.HoldingFrozenSnack)
             {
                 OnStartThrow();
             }
@@ -87,14 +87,12 @@ public class Thrower : MonoBehaviour
     
     private void OnShoot(InputAction.CallbackContext context)
     {
-        if (playerInventory.HoldingFriedSnack)
-        {
-            OnEndThrow();
-        }
+        Debug.Log("asdad");
         if (!playerInventory.HoldingFriedSnack && !playerInventory.HoldingFrozenSnack)
         {
             return;
         }
+        OnEndThrow();
         
         var projectile = Instantiate(projectilePrefab, projectileSpawn.position, Quaternion.identity);
         var snackType = playerInventory.HoldingFriedSnack ? playerInventory.friedSnack.snackType : playerInventory.frozenSnack.snackType;
