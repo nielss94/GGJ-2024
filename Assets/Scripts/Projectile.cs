@@ -59,7 +59,6 @@ public class Projectile : MonoBehaviour
     {
         if (!other.gameObject.TryGetComponent(out Projectile projectile))
         {
-            Debug.Log($"Hit {other.gameObject.name}");
             hitSomething = true;
         }
     }

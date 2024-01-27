@@ -6,9 +6,12 @@ using UnityEngine.InputSystem;
 
 public class Thrower : MonoBehaviour
 {
+    public event Action OnStartThrow = delegate {};
+    public event Action OnEndThrow = delegate {};
     public event Action<float> OnUpdateThrowForce = delegate {}; // throwforce from 0 to 1 
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform projectileSpawn;
+    [SerializeField] private Vector3 projectileLookAtOffset;
     [SerializeField] private float maxThrowForce = 100;
     [SerializeField] private float minThrowForce = 0;
     [SerializeField] private float throwForce = 100;
@@ -23,6 +26,13 @@ public class Thrower : MonoBehaviour
         inputActionAsset = new SnackbarInput();
         inputActionAsset.Ingame.Shoot.Enable();
         inputActionAsset.Ingame.Shoot.canceled += OnShoot;
+        inputActionAsset.Ingame.Shoot.started += ctx =>
+        {
+            if (playerInventory.HoldingFriedSnack)
+            {
+                OnStartThrow();
+            }
+        };
     }
     
     private void Start()
@@ -33,6 +43,8 @@ public class Thrower : MonoBehaviour
 
     private void Update()
     {
+        projectileSpawn.LookAt((Camera.main.transform.position + Camera.main.transform.forward.normalized * 5) + projectileLookAtOffset);
+        
         var shootInput = inputActionAsset.Ingame.Shoot.ReadValue<float>();
         if (shootInput > 0 && (playerInventory.HoldingFriedSnack || playerInventory.HoldingFrozenSnack))
         {
@@ -46,10 +58,18 @@ public class Thrower : MonoBehaviour
             
             OnUpdateThrowForce(throwForce / maxThrowForce);
         }
+        else
+        {
+            projector.ClearTrajectory();
+        }
     }
     
     private void OnShoot(InputAction.CallbackContext context)
     {
+        if (playerInventory.HoldingFriedSnack)
+        {
+            OnEndThrow();
+        }
         if (!playerInventory.HoldingFriedSnack && !playerInventory.HoldingFrozenSnack)
         {
             return;
