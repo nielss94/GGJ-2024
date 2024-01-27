@@ -38,12 +38,13 @@ public class Thrower : MonoBehaviour
         {
             throwForce += throwForceRampSpeed * Time.deltaTime;
             throwForce = Mathf.Clamp(throwForce, minThrowForce, maxThrowForce);
-            projector.SimulateTrajectory(projectilePrefab, projectileSpawn.position, projectileSpawn.forward * throwForce);
+            
+            if (Time.frameCount % 3 == 0)
+            {
+                projector.SimulateTrajectory(projectilePrefab, projectileSpawn.position, projectileSpawn.forward * throwForce);
+            }
+            
             OnUpdateThrowForce(throwForce / maxThrowForce);
-        }
-        else
-        {
-            projector.ClearTrajectory();
         }
     }
     
