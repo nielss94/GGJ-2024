@@ -14,6 +14,7 @@ public class Projector : MonoBehaviour
     
     private Scene simulationScene;
     private PhysicsScene phyicsScene;
+    private Projectile ghostProjectile;
 
     private void Start()
     {
@@ -35,20 +36,30 @@ public class Projector : MonoBehaviour
 
     public void SimulateTrajectory(Projectile projectile, Vector3 pos, Vector3 velocity)
     {
-        var ghostObj = Instantiate(projectile, pos, Quaternion.identity);
-        SceneManager.MoveGameObjectToScene(ghostObj.gameObject, simulationScene);
-        
-        ghostObj.Init(velocity);
-        
+        if (ghostProjectile == null)
+        {
+            ghostProjectile = Instantiate(projectile, pos, Quaternion.identity);
+            SceneManager.MoveGameObjectToScene(ghostProjectile.gameObject, simulationScene);
+            ghostProjectile.SetGhost(true);
+        }
+
+        ghostProjectile.Init(pos, velocity);
         line.positionCount = maxSimulationIteration;
 
         for (int i = 0; i < maxSimulationIteration; i++)
         {
+            
             phyicsScene.Simulate(Time.fixedDeltaTime);
-            line.SetPosition(i, ghostObj.transform.position);
+            line.SetPosition(i, ghostProjectile.transform.position);
+            
+            if (ghostProjectile.hitSomething)
+            {
+                line.positionCount = i + 1;
+                break;
+            }
         }
         
-        Destroy(ghostObj.gameObject);
+        // Destroy(ghostObj.gameObject);
     }
     
     public void ClearTrajectory()
