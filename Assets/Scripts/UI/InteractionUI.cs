@@ -24,7 +24,11 @@ public class InteractionUI : MonoBehaviour
         
         if (gameObject.TryGetComponent(out SnackStack snackStack))
         {
-            interactionText.text = $"Press {inputActionAsset.Ingame.Interact.name} to interact with {snackStack.SnackType}";
+            interactionText.text = $"Press {inputActionAsset.Ingame.Interact.name} to take frozen {snackStack.SnackType}";
+        }
+        else if (gameObject.TryGetComponent(out FryingPan fryingPan))
+        {
+            interactionText.text = $"Press {inputActionAsset.Ingame.Interact.name} to take fried {fryingPan.currentSnackType}";
         }
         else
         {
