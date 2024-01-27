@@ -12,6 +12,8 @@ public class PlayerInventory : MonoBehaviour
     public Transform frozenSnackHolder;
     public Transform friedSnackHolder;
     
+    [SerializeField] private MeshRenderer mandRenderer;
+    
     public bool Available => frozenSnack == null && friedSnack == null;
     
     [SerializeField] private FrozenSnack frozenSnackPrefab;
@@ -26,6 +28,7 @@ public class PlayerInventory : MonoBehaviour
     {
         friedSnack = Instantiate(friedSnackPrefab, friedSnackHolder.position, friedSnackHolder.rotation, friedSnackHolder);
         friedSnack.Init(snackType);
+        mandRenderer.enabled = true;
     }
     
     public void DropFrozenSnack()
@@ -38,5 +41,6 @@ public class PlayerInventory : MonoBehaviour
     {
         Destroy(friedSnack.gameObject);
         friedSnack = null;
+        mandRenderer.enabled = false;
     }
 }
