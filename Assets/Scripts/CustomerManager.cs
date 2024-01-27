@@ -12,13 +12,21 @@ public class CustomerManager : MonoBehaviour
     
     public Customer customerPrefab;
     
-    public float minSpawnInterval = 5f;
-    public float maxSpawnInterval = 10f;
+    private float minSpawnInterval = 5f;
+    private float maxSpawnInterval = 10f;
     private float lastSpawnTime;
+    private LevelProgressionManager levelProgressionManager;
     
     private void Start()
     {
         lastSpawnTime = Time.time;
+    }
+
+    public void Init(float minSpawnInterval, float maxSpawnInterval, LevelProgressionManager levelProgressionManager)
+    {
+        this.minSpawnInterval = minSpawnInterval;
+        this.maxSpawnInterval = maxSpawnInterval;
+        this.levelProgressionManager = levelProgressionManager;
     }
     
     private void Update()
@@ -34,6 +42,8 @@ public class CustomerManager : MonoBehaviour
     {
         Customer customer = Instantiate(customerPrefab, customerSpawnPoint.position, customerSpawnPoint.rotation);
         customer.Init(travelPoints);
+        customer.gameObject.GetComponent<CustomerOrder>().OnOrderIncorrect += levelProgressionManager.OnCustomerMiss;
+        customer.gameObject.GetComponent<CustomerOrder>().OnOrderCorrect += levelProgressionManager.OnCustomerHit;
         customers.Add(customer);
     }
     

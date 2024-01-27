@@ -8,6 +8,8 @@ using Random = UnityEngine.Random;
 
 public class Customer : MonoBehaviour
 {
+    [SerializeField] private CustomerFace customerFace;
+    
     [SerializeField] private float walkSpeed = 1f;
     private NavMeshAgent navMeshAgent;
     public bool walking = true;
@@ -56,7 +58,7 @@ public class Customer : MonoBehaviour
     }
 
     private IEnumerator Travel(List<Transform> travelPoints)
-    {       
+    {
         var randomIndex = Random.Range(0, travelPoints.Count);
         int currentTravelPoint = randomIndex;
         navMeshAgent.SetDestination(travelPoints[currentTravelPoint].position);
