@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using DG.Tweening;
 
 public enum Orientation
@@ -22,6 +21,9 @@ public class PlayerTurn : MonoBehaviour
     [SerializeField] private bool canRotateDuringTurn = false;
     
     private bool rotating = false;
+    
+    public Orientation Orientation => orientation;
+    
     private void Start()
     {
         SetOrientation(orientation);
