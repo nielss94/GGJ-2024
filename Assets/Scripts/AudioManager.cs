@@ -16,21 +16,27 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayClip(AudioClip clip, Vector3 position, float pitch = 1f, bool randomPitch = false)
+    public void PlayClip(AudioClip clip, Vector3 position, float pitch = 1f, bool randomPitch = false, float randomPitchRange = 0.2f)
     {
         AudioSource audioSource = Instantiate(audioSourcePrefab, position, Quaternion.identity);
+        
+        if (randomPitch)
+        {
+            pitch = Random.Range(pitch - randomPitchRange, pitch + randomPitchRange);
+        }
+        
         audioSource.pitch = pitch;
         audioSource.PlayOneShot(clip);
         Destroy(audioSource.gameObject, clip.length);
     }
     
-    public IEnumerator PlayMultipleClips(int amount, AudioClip[] clips, Vector3 position, float pitch = 1f, bool randomPitch = false)
+    public IEnumerator PlayMultipleClips(int amount, AudioClip[] clips, Vector3 position, float pitch = 1f, bool randomPitch = false, float randomPitchRange = 0.2f)
     {
         for (int i = 0; i < amount; i++)
         {
             yield return new WaitForSeconds(.175f);
             int randomIndex = Random.Range(0, clips.Length);
-            PlayClip(clips[randomIndex], position, pitch, randomPitch);
+            PlayClip(clips[randomIndex], position, pitch, randomPitch, randomPitchRange);
         }
     }
 }
