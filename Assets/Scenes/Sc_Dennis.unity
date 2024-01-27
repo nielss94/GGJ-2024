@@ -2538,6 +2538,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000959433}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1005452484
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.6692969
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5037998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.109566
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 648c317abf3576749b76a4ed92cc1793, type: 2}
+    - target: {fileID: 919132149155446097, guid: c412400cc3ffc16408a544ce5aa68a72,
+        type: 3}
+      propertyPath: m_Name
+      value: Snack_Bamischijf
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c412400cc3ffc16408a544ce5aa68a72, type: 3}
 --- !u!1 &1009785362
 GameObject:
   m_ObjectHideFlags: 0
@@ -5446,79 +5519,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4315345895400471331
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4810873218119075100, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: CollisionModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249698369359776666, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.568668
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249698369359776666, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.9540536
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249698369359776666, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 16.026495
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249698369359776666, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249698369359776666, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249698369359776666, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249698369359776666, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249698369359776666, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249698369359776666, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249698369359776666, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8559643628429635544, guid: c3242646bc5af184590885fc9694e07e,
-        type: 3}
-      propertyPath: m_Name
-      value: PS_Trail_Bitterballen
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c3242646bc5af184590885fc9694e07e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5564,7 +5564,7 @@ SceneRoots:
   - {fileID: 1801430390}
   - {fileID: 1116578723}
   - {fileID: 498621413}
-  - {fileID: 4315345895400471331}
   - {fileID: 1146137596}
   - {fileID: 304111927}
   - {fileID: 1877108575}
+  - {fileID: 1005452484}
