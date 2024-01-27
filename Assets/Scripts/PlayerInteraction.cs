@@ -11,9 +11,9 @@ public class PlayerInteraction : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, interactionLayers))
         {
-            if (hit.transform.TryGetComponent(out Snack snack))
+            if (hit.transform.TryGetComponent(out SnackStack snackStack))
             {
-                Debug.Log("Snack: " + snack.SnackType);
+                Debug.Log("Snack Stack: " + snackStack.SnackType);
             }
             
         }

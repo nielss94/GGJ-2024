@@ -9,12 +9,23 @@ public class PlayerLook : MonoBehaviour
     private float yRotation = 0f; 
     private float xRotation = 0f;
     
-    [SerializeField] private float rotationSpeed = 1f; 
+    private float rotationSpeed = 1f; 
     [SerializeField] private Transform cameraTarget;
     
     [SerializeField] private PlayerTurn playerTurn;
     public SnackbarInput inputActionAsset;
     
+    [Header("Look settings")]
+    [SerializeField] private float lookMinXRotation = -90f;
+    [SerializeField] private float lookMaxXRotation = 90f;
+    
+    [Header("Kitchen look settings")]
+    [SerializeField] private float kitchenLookMinYRotation = 90f;
+    [SerializeField] private float kitchenLookMaxYRotation = 270f;
+    
+    [Header("Snackbar look settings")]
+    [SerializeField] private float snackbarLookMinYRotation = -90f;
+    [SerializeField] private float snackbarLookMaxYRotation = 90f;
 
     private void Awake()
     {
@@ -36,6 +47,7 @@ public class PlayerLook : MonoBehaviour
 
     private void Start()
     {
+        rotationSpeed = PlayerPrefs.GetFloat("Sensitivity", 10);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -64,9 +76,9 @@ public class PlayerLook : MonoBehaviour
         switch (orientation)
         {
             case Orientation.Snackbar:
-                return new Tuple<float, float>(Mathf.Clamp(yRotation, -90f, 90f), Mathf.Clamp(xRotation, -90f, 90f));
+                return new Tuple<float, float>(Mathf.Clamp(yRotation, snackbarLookMinYRotation, snackbarLookMaxYRotation), Mathf.Clamp(xRotation, lookMinXRotation, lookMaxXRotation));
             case Orientation.Kitchen:
-                return new Tuple<float, float>(Mathf.Clamp(yRotation, 90f, 270f), Mathf.Clamp(xRotation, -90f, 90f));
+                return new Tuple<float, float>(Mathf.Clamp(yRotation, kitchenLookMinYRotation, kitchenLookMaxYRotation), Mathf.Clamp(xRotation, lookMinXRotation, lookMaxXRotation));
             default:
                 return new Tuple<float, float>(yRotation, xRotation);
         }

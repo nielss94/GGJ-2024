@@ -12,7 +12,7 @@ public enum SnackType
     Friet
 }
 
-public class Snack : MonoBehaviour
+public class SnackStack : MonoBehaviour
 {
     [SerializeField] private SnackType snackType;
     
