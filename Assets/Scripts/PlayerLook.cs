@@ -71,7 +71,7 @@ public class PlayerLook : MonoBehaviour
 
     private void Start()
     {
-        rotationSpeed = PlayerPrefs.GetFloat("Sensitivity", 10);
+        rotationSpeed = PlayerPrefs.GetFloat("Sensitivity", 1);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
