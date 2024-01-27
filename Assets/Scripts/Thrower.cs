@@ -14,7 +14,6 @@ public class Thrower : MonoBehaviour
     public event Action<float> OnUpdateThrowForce = delegate {}; // throwforce from 0 to 1 
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform projectileSpawn;
-    [SerializeField] private Vector3 projectileLookAtOffset;
     [SerializeField] private float maxThrowForce = 100;
     [SerializeField] private float minThrowForce = 0;
     [SerializeField] private float throwForce = 100;
@@ -61,7 +60,7 @@ public class Thrower : MonoBehaviour
 
     private void Update()
     {
-        projectileSpawn.LookAt((Camera.main.transform.position + Camera.main.transform.forward.normalized * 5) + projectileLookAtOffset);
+        projectileSpawn.LookAt((Camera.main.transform.position + Camera.main.transform.forward.normalized * 5));
         
         var shootInput = inputActionAsset.Ingame.Shoot.ReadValue<float>();
         var aimInput = inputActionAsset.Ingame.Aim.ReadValue<float>();
@@ -75,7 +74,7 @@ public class Thrower : MonoBehaviour
                 OnUpdateThrowForce(throwForce / maxThrowForce);
             }
             
-            if (Time.frameCount % 3 == 0)
+            if (true)
             {
                 projector.SimulateTrajectory(projectilePrefab, projectileSpawn.position, projectileSpawn.forward * throwForce);
             }

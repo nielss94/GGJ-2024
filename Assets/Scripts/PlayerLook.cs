@@ -24,6 +24,8 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] private float shootCameraDistance = 2.5f;
     [SerializeField] private float cameraDistanceChangeSpeed = .5f;
     
+    [SerializeField] private float lookMinXRotation = -90f;
+    [SerializeField] private float lookMaxXRotation = 90f;
     private void Awake()
     {
         inputActionAsset = new SnackbarInput();
@@ -81,9 +83,10 @@ public class PlayerLook : MonoBehaviour
         yRotation += input.x * rotationSpeed;
         xRotation += -input.y * rotationSpeed;
 
+        xRotation = Mathf.Clamp(xRotation, lookMinXRotation, lookMaxXRotation);
         // Apply the rotation
         transform.rotation = Quaternion.Euler(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
         cameraTarget.rotation = Quaternion.Euler(xRotation, cameraTarget.eulerAngles.y, cameraTarget.eulerAngles.z);
     }
-
+    
 }
