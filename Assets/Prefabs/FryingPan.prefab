@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2630733697037403683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -564,6 +564,18 @@ MonoBehaviour:
   snackReady: 0
   currentSnackType: 0
   canvas: {fileID: 2721424088154180879}
-  fryingImage: {fileID: 0}
-  fryingSprite: {fileID: 0}
-  readySprite: {fileID: 0}
+  fryingImage: {fileID: 5799569501242530066}
+  snackImage: {fileID: 2608703806609095279}
+  snackOptions:
+  - snackType: 0
+    sprite: {fileID: 21300000, guid: 30f63f221115d174c89e3a1900e75eed, type: 3}
+  - snackType: 1
+    sprite: {fileID: 21300000, guid: 112a3cbf066538146a6a9390d3caf29b, type: 3}
+  - snackType: 2
+    sprite: {fileID: 21300000, guid: 69e7e50695200df44a2d291ebb6b7423, type: 3}
+  - snackType: 3
+    sprite: {fileID: 21300000, guid: b3200be542e21f94dbab840637ab0172, type: 3}
+  - snackType: 4
+    sprite: {fileID: 21300000, guid: 84762d3decf6fdf4f8e5a88c2561ec9a, type: 3}
+  - snackType: 5
+    sprite: {fileID: 21300000, guid: 8d63cd5cdc5dd0742b9c579ceb1387e0, type: 3}

@@ -139,6 +139,8 @@ GameObject:
   - component: {fileID: 5635167414217733239}
   - component: {fileID: 7067313152492972070}
   - component: {fileID: 5331263841689348790}
+  - component: {fileID: 1706130535354048290}
+  - component: {fileID: 3925980946327110418}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -295,7 +297,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f654384ba63c14db48ec5a9348c65e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2.5
+  moveInput: {x: 0, y: 0}
+--- !u!114 &1706130535354048290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5846278617479036072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24d4ab0e80dd4fb29456c9311047834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4810009607156666958}
+  thrower: {fileID: 6980001116275478327}
+  playerMove: {fileID: 5331263841689348790}
+--- !u!114 &3925980946327110418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5846278617479036072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70507a600a8804abd879106e590c3c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laughClips:
+  - {fileID: 8300000, guid: 4ae3f3416f48a004cb6977ec3610846a, type: 3}
+  - {fileID: 8300000, guid: 9c3be3cafc1e3544cb90d7584bae2d06, type: 3}
+  - {fileID: 8300000, guid: 8450c6974c8c4b741841b888dbb9de51, type: 3}
+  - {fileID: 8300000, guid: b17dc69e76b96a6499d7822c43af3928, type: 3}
+  - {fileID: 8300000, guid: 3a1cfb6c23851974baf72774f0dafcc3, type: 3}
+  - {fileID: 8300000, guid: def416adfa9599d42af5f4551a150bd7, type: 3}
+  - {fileID: 8300000, guid: fafa5bb2f715f164aabaa8181e05a884, type: 3}
+  - {fileID: 8300000, guid: 6f91374e0f19b6844a008f6320b05532, type: 3}
+  - {fileID: 8300000, guid: f84560c14f094df46a7178a8e3fd0e18, type: 3}
+  - {fileID: 8300000, guid: 6e199b7835f6c1e46b8ce9ed92cf73e3, type: 3}
+  - {fileID: 8300000, guid: 32a0b611757ee914cbb263a0aa4603d5, type: 3}
+  - {fileID: 8300000, guid: 4a38e3997f9b94a40a134cf520101419, type: 3}
+  - {fileID: 8300000, guid: 8f501c784fe2d2848b21c35e3d506b67, type: 3}
+  - {fileID: 8300000, guid: d5002424265505e45999930ece1b07dd, type: 3}
+  - {fileID: 8300000, guid: c8af7b4f446a85544af6b8c307d51287, type: 3}
+  playerPitch: 1
 --- !u!1 &6369376832029999373
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +580,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH_Chef
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 2b5e9ec3099971f4a879a8169c106b2b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 319bd18a47168eb48ab4aa16b26d6f4e, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 2b5e9ec3099971f4a879a8169c106b2b,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -541,6 +598,12 @@ PrefabInstance:
 --- !u!4 &1450364226269333556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2b5e9ec3099971f4a879a8169c106b2b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1416949332745826271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4810009607156666958 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 2b5e9ec3099971f4a879a8169c106b2b,
     type: 3}
   m_PrefabInstance: {fileID: 1416949332745826271}
   m_PrefabAsset: {fileID: 0}

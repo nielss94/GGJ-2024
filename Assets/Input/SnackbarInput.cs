@@ -80,6 +80,15 @@ public partial class @SnackbarInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Laugh"",
+                    ""type"": ""Button"",
+                    ""id"": ""71bfe501-1cc8-49df-9bae-c233c19b9b43"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -174,7 +183,7 @@ public partial class @SnackbarInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5e3e8e10-2d70-4d9d-9871-a86a6910e975"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -269,6 +278,28 @@ public partial class @SnackbarInput: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4ccaf5a5-189e-453d-98c9-62e1b9e98b46"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Laugh"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fcb33b70-db72-4315-a324-755590288a10"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Laugh"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -283,6 +314,7 @@ public partial class @SnackbarInput: IInputActionCollection2, IDisposable
         m_Ingame_Interact = m_Ingame.FindAction("Interact", throwIfNotFound: true);
         m_Ingame_Aim = m_Ingame.FindAction("Aim", throwIfNotFound: true);
         m_Ingame_Move = m_Ingame.FindAction("Move", throwIfNotFound: true);
+        m_Ingame_Laugh = m_Ingame.FindAction("Laugh", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -350,6 +382,7 @@ public partial class @SnackbarInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Ingame_Interact;
     private readonly InputAction m_Ingame_Aim;
     private readonly InputAction m_Ingame_Move;
+    private readonly InputAction m_Ingame_Laugh;
     public struct IngameActions
     {
         private @SnackbarInput m_Wrapper;
@@ -360,6 +393,7 @@ public partial class @SnackbarInput: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Ingame_Interact;
         public InputAction @Aim => m_Wrapper.m_Ingame_Aim;
         public InputAction @Move => m_Wrapper.m_Ingame_Move;
+        public InputAction @Laugh => m_Wrapper.m_Ingame_Laugh;
         public InputActionMap Get() { return m_Wrapper.m_Ingame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -387,6 +421,9 @@ public partial class @SnackbarInput: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @Laugh.started += instance.OnLaugh;
+            @Laugh.performed += instance.OnLaugh;
+            @Laugh.canceled += instance.OnLaugh;
         }
 
         private void UnregisterCallbacks(IIngameActions instance)
@@ -409,6 +446,9 @@ public partial class @SnackbarInput: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @Laugh.started -= instance.OnLaugh;
+            @Laugh.performed -= instance.OnLaugh;
+            @Laugh.canceled -= instance.OnLaugh;
         }
 
         public void RemoveCallbacks(IIngameActions instance)
@@ -434,5 +474,6 @@ public partial class @SnackbarInput: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
+        void OnLaugh(InputAction.CallbackContext context);
     }
 }
