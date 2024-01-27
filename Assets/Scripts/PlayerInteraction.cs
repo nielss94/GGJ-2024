@@ -26,10 +26,10 @@ public class PlayerInteraction : MonoBehaviour
             {
                 if (playerInventory.Available)
                 {
-                    Debug.Log("Snack Stack: " + snackStack.SnackType);
+                    // Debug.Log("Snack Stack: " + snackStack.SnackType);
                     if (inputActionAsset.Ingame.Interact.triggered)
                     {
-                        Debug.Log("Interact with Snack Stack " + snackStack.SnackType);
+                        // Debug.Log("Interact with Snack Stack " + snackStack.SnackType);
                         playerInventory.TakeFrozenSnack(snackStack.SnackType);
                     }
                     
