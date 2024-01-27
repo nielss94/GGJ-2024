@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeedInSeconds: 0.5
   orientation: 0
-  canRotateDuringTurn: 1
+  canRotateDuringTurn: 0
   rotating: 0
 --- !u!114 &5635167414217733239
 MonoBehaviour:
@@ -272,12 +272,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTarget: {fileID: 6313633654697963667}
   playerTurn: {fileID: 7958924632120190471}
-  lookMinXRotation: -90
-  lookMaxXRotation: 90
+  lookMinXRotation: -30
+  lookMaxXRotation: 30
   kitchenLookMinYRotation: 90
   kitchenLookMaxYRotation: 270
-  snackbarLookMinYRotation: -90
-  snackbarLookMaxYRotation: 90
+  snackbarLookMinYRotation: -45
+  snackbarLookMaxYRotation: 45
 --- !u!114 &7067313152492972070
 MonoBehaviour:
   m_ObjectHideFlags: 0
