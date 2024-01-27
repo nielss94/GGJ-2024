@@ -5,7 +5,17 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    public event Action<GameObject> OnLookAtInteraction = delegate {  };
     [SerializeField] private LayerMask interactionLayers;
+    
+    private SnackbarInput inputActionAsset;
+    
+    private void Awake()
+    {
+        inputActionAsset = new SnackbarInput();
+        inputActionAsset.Ingame.Interact.Enable();
+    }
+    
     private void Update()
     {
         RaycastHit hit;
@@ -14,8 +24,16 @@ public class PlayerInteraction : MonoBehaviour
             if (hit.transform.TryGetComponent(out SnackStack snackStack))
             {
                 Debug.Log("Snack Stack: " + snackStack.SnackType);
+                if (inputActionAsset.Ingame.Interact.triggered)
+                {
+                    Debug.Log("Interact with Snack Stack " + snackStack.SnackType);
+                }
             }
-            
+            OnLookAtInteraction(hit.transform.gameObject);
+        }
+        else
+        {
+            OnLookAtInteraction(null);
         }
     }
 }
