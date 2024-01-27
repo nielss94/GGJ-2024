@@ -7,7 +7,10 @@ using UnityEngine.InputSystem;
 public class Thrower : MonoBehaviour
 {
     public event Action OnStartThrow = delegate {};
-    public event Action OnEndThrow = delegate {};
+    public event Action OnEndThrow = delegate {};    
+    public event Action OnStartAim = delegate {};
+    public event Action OnEndAim = delegate {};
+
     public event Action<float> OnUpdateThrowForce = delegate {}; // throwforce from 0 to 1 
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform projectileSpawn;
@@ -25,6 +28,21 @@ public class Thrower : MonoBehaviour
     {
         inputActionAsset = new SnackbarInput();
         inputActionAsset.Ingame.Shoot.Enable();
+        inputActionAsset.Ingame.Aim.Enable();
+        
+        inputActionAsset.Ingame.Aim.started += ctx =>
+        {
+            if (playerInventory.HoldingFriedSnack)
+            {
+                OnStartAim();
+            }
+        };
+        
+        inputActionAsset.Ingame.Aim.canceled += ctx =>
+        {
+            OnEndAim();
+        };
+        
         inputActionAsset.Ingame.Shoot.canceled += OnShoot;
         inputActionAsset.Ingame.Shoot.started += ctx =>
         {
@@ -46,17 +64,21 @@ public class Thrower : MonoBehaviour
         projectileSpawn.LookAt((Camera.main.transform.position + Camera.main.transform.forward.normalized * 5) + projectileLookAtOffset);
         
         var shootInput = inputActionAsset.Ingame.Shoot.ReadValue<float>();
-        if (shootInput > 0 && (playerInventory.HoldingFriedSnack || playerInventory.HoldingFrozenSnack))
+        var aimInput = inputActionAsset.Ingame.Aim.ReadValue<float>();
+        if (aimInput > 0  && (playerInventory.HoldingFriedSnack || playerInventory.HoldingFrozenSnack))
         {
-            throwForce += throwForceRampSpeed * Time.deltaTime;
-            throwForce = Mathf.Clamp(throwForce, minThrowForce, maxThrowForce);
+            if (shootInput > 0)
+            {
+                throwForce += throwForceRampSpeed * Time.deltaTime;
+                throwForce = Mathf.Clamp(throwForce, minThrowForce, maxThrowForce);
+               
+                OnUpdateThrowForce(throwForce / maxThrowForce);
+            }
             
             if (Time.frameCount % 3 == 0)
             {
                 projector.SimulateTrajectory(projectilePrefab, projectileSpawn.position, projectileSpawn.forward * throwForce);
             }
-            
-            OnUpdateThrowForce(throwForce / maxThrowForce);
         }
         else
         {
