@@ -14,7 +14,6 @@ public enum Orientation
 public class PlayerTurn : MonoBehaviour
 {
     public event Action OnDoTurn = delegate {  };
-    [SerializeField] private new Rigidbody rigidbody;
     [SerializeField] private float turnSpeedInSeconds = .5f;
 
     [SerializeField]

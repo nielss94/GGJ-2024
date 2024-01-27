@@ -43,7 +43,7 @@ public partial class @SnackbarInput: IInputActionCollection2, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Look"",
@@ -70,7 +70,7 @@ public partial class @SnackbarInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""aadac8ef-4196-4b56-b27e-4965fa349a59"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
