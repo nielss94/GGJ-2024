@@ -23,6 +23,7 @@ public class Thrower : MonoBehaviour
     
     private SnackbarInput inputActionAsset;
 
+    
     private void Awake()
     {
         inputActionAsset = new SnackbarInput();
