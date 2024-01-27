@@ -18,8 +18,9 @@ public class FryingPan : MonoBehaviour
     private Camera mainCamera;
 
     [SerializeField] private Image fryingImage;
-    [SerializeField] private Sprite fryingSprite;
-    [SerializeField] private Sprite readySprite;
+    [SerializeField] private Image snackImage;
+    
+    public List<SnackOption> snackOptions = new List<SnackOption>();
     
     private void Awake()
     {        
@@ -48,8 +49,13 @@ public class FryingPan : MonoBehaviour
             currentSnackType = projectile.snackType;
             projectile.transform.SetParent(snackHolder);
             projectile.transform.position = snackHolder.position;
+            canvas.gameObject.SetActive(true);
             currentSnack = projectile.gameObject;
             fryStartTime = Time.time;
+            
+            fryingImage.fillAmount = 0f;
+            snackImage.sprite = snackOptions.Find(x => x.snackType == currentSnackType).sprite;
+            
         }
     }
 
@@ -64,6 +70,9 @@ public class FryingPan : MonoBehaviour
             {
                 snackReady = true;
             }
+            
+            // fill image
+            fryingImage.fillAmount = Mathf.Clamp01((Time.time - fryStartTime) / fryDuration);
         }
         
     }
@@ -72,5 +81,6 @@ public class FryingPan : MonoBehaviour
     {
         Destroy(currentSnack);
         currentSnack = null;
+        canvas.gameObject.SetActive(false);
     }
 }
