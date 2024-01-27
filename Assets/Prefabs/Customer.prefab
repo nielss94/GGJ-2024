@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.8, y: 0.8}
+  m_SizeDelta: {x: 0.6, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2398170031027286843
 CanvasRenderer:
@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snackType: 0
+  patienceTimeSeconds: 30
   canvas: {fileID: 2700826685460748217}
   timerFill: {fileID: 2894586493511832146}
   snackImage: {fileID: 7302899759660757414}
@@ -207,6 +208,11 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 84762d3decf6fdf4f8e5a88c2561ec9a, type: 3}
   - snackType: 5
     sprite: {fileID: 21300000, guid: 8d63cd5cdc5dd0742b9c579ceb1387e0, type: 3}
+  startColor: {r: 0, g: 1, b: 0, a: 1}
+  endColor: {r: 1, g: 0, b: 0, a: 1}
+  audioSource: {fileID: 0}
+  orderCorrectSounds: []
+  orderIncorrectSounds: []
 --- !u!1 &5007346340636564618
 GameObject:
   m_ObjectHideFlags: 0
