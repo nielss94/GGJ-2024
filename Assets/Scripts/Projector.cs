@@ -50,5 +50,10 @@ public class Projector : MonoBehaviour
         
         Destroy(ghostObj.gameObject);
     }
+    
+    public void ClearTrajectory()
+    {
+        line.positionCount = 0;
+    }
 
 }
