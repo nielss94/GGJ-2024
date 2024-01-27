@@ -12,11 +12,11 @@ public class CustomerFace : MonoBehaviour
         this.customer = GetComponentInParent<Customer>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.TryGetComponent(out Projectile projectile))
         {
-            if (!projectile.isFrozen) return;
+            if (projectile.isFrozen) return;
             
             customer.gameObject.GetComponent<CustomerOrder>().OnSnackHit(projectile.snackType);
             
