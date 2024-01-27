@@ -14,6 +14,7 @@ public class Thrower : MonoBehaviour
     [SerializeField] private float throwForce = 100;
     [SerializeField] private float throwForceRampSpeed = 10;
     [SerializeField] private Projector projector;
+    [SerializeField] private PlayerInventory playerInventory;
     
     private SnackbarInput inputActionAsset;
 
@@ -33,7 +34,7 @@ public class Thrower : MonoBehaviour
     private void Update()
     {
         var shootInput = inputActionAsset.Ingame.Shoot.ReadValue<float>();
-        if (shootInput > 0)
+        if (shootInput > 0 && (playerInventory.HoldingFriedSnack || playerInventory.HoldingFrozenSnack))
         {
             throwForce += throwForceRampSpeed * Time.deltaTime;
             throwForce = Mathf.Clamp(throwForce, minThrowForce, maxThrowForce);
@@ -48,11 +49,26 @@ public class Thrower : MonoBehaviour
     
     private void OnShoot(InputAction.CallbackContext context)
     {
+        if (!playerInventory.HoldingFriedSnack && !playerInventory.HoldingFrozenSnack)
+        {
+            return;
+        }
+        
         var projectile = Instantiate(projectilePrefab, projectileSpawn.position, Quaternion.identity);
-        projectile.Init(projectileSpawn.forward * throwForce);
+        var snackType = playerInventory.HoldingFriedSnack ? playerInventory.friedSnack.snackType : playerInventory.frozenSnack.snackType;
+        projectile.Init(projectileSpawn.forward * throwForce, snackType, playerInventory.HoldingFrozenSnack);
         
         throwForce = minThrowForce;
         OnUpdateThrowForce(throwForce / maxThrowForce);
+        
+        if (playerInventory.HoldingFriedSnack)
+        {
+            playerInventory.DropFriedSnack();
+        }
+        else if (playerInventory.HoldingFrozenSnack)
+        {
+            playerInventory.DropFrozenSnack();
+        }
     }
     
 }

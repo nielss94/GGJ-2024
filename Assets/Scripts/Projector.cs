@@ -38,7 +38,7 @@ public class Projector : MonoBehaviour
         var ghostObj = Instantiate(projectile, pos, Quaternion.identity);
         SceneManager.MoveGameObjectToScene(ghostObj.gameObject, simulationScene);
         
-        ghostObj.Init(velocity);
+        ghostObj.Init(velocity, projectile.snackType, projectile.isFrozen);
         
         line.positionCount = maxSimulationIteration;
 
