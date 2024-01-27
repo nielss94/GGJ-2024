@@ -28,7 +28,14 @@ public class InteractionUI : MonoBehaviour
         }
         else if (gameObject.TryGetComponent(out FryingPan fryingPan))
         {
-            interactionText.text = $"Press {inputActionAsset.Ingame.Interact.name} to take fried {fryingPan.currentSnackType}";
+            if (fryingPan.snackReady)
+            {
+                interactionText.text = $"Press {inputActionAsset.Ingame.Interact.name} to take fried {fryingPan.currentSnackType}";
+            }
+            else
+            {
+                interactionText.text = $"{fryingPan.currentSnackType} is frying";
+            }
         }
         else
         {
