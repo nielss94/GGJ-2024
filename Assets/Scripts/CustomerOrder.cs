@@ -24,10 +24,12 @@ public class CustomerOrder : MonoBehaviour
     {
         if (snackType == this.snackType)
         {
+            Debug.Log("Order correct");
             OnOrderCorrect();
         }
         else
         {
+            Debug.Log("Order incorrect");
             OnOrderIncorrect();
         }
     }
@@ -44,6 +46,7 @@ public class CustomerOrder : MonoBehaviour
             if (projectile.isFrozen) return;
             
             // Snack hit body, bad!
+            Debug.Log("Order incorrect");
             OnOrderIncorrect();
             
             Destroy(projectile.gameObject);    

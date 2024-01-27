@@ -87,7 +87,7 @@ public class Thrower : MonoBehaviour
     
     private void OnShoot(InputAction.CallbackContext context)
     {
-        Debug.Log("asdad");
+        // Debug.Log("asdad");
         if (!playerInventory.HoldingFriedSnack && !playerInventory.HoldingFrozenSnack)
         {
             return;

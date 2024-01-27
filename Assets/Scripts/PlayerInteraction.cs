@@ -46,10 +46,10 @@ public class PlayerInteraction : MonoBehaviour
             {
                 if (playerInventory.Available)
                 {
-                    Debug.Log("Fying pan: " + fryingPan.currentSnackType);
+                    // Debug.Log("Fying pan: " + fryingPan.currentSnackType);
                     if (inputActionAsset.Ingame.Interact.triggered && fryingPan.snackReady)
                     {
-                        Debug.Log("Take " + fryingPan.currentSnackType);
+                        // Debug.Log("Take " + fryingPan.currentSnackType);
                         playerInventory.TakeFriedSnack(fryingPan.currentSnackType);
                         fryingPan.TakeSnack();
                     }
