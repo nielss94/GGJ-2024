@@ -334,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   line: {fileID: 2359063661785495409}
   obstaclesParent: {fileID: 0}
-  maxSimulationIteration: 10
+  maxSimulationIteration: 50
 --- !u!120 &2359063661785495409
 LineRenderer:
   serializedVersion: 2
