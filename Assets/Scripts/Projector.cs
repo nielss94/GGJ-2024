@@ -43,7 +43,8 @@ public class Projector : MonoBehaviour
             ghostProjectile.SetGhost(true);
         }
 
-        ghostProjectile.Init(pos, velocity);
+        ghostProjectile.Init(pos, velocity, projectile.snackType, projectile.isFrozen);
+
         line.positionCount = maxSimulationIteration;
 
         for (int i = 0; i < maxSimulationIteration; i++)

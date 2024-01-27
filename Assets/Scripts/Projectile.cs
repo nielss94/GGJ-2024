@@ -7,18 +7,34 @@ public class Projectile : MonoBehaviour
     public bool hitSomething = false;
     
     [SerializeField] private Rigidbody rigidBody;
+
+    public bool isFrozen;
     
-    public void Init(Vector3 velocity)
+    public SnackType snackType;
+    public void Init(Vector3 velocity, SnackType snackType, bool isFrozen)
     {
         hitSomething = false;
         rigidBody.velocity = Vector3.zero;
+        this.isFrozen = isFrozen;
         rigidBody.AddForce(velocity, ForceMode.Impulse);
+        
+        this.snackType = snackType;
+        
+        string snackName = snackType.ToString();
+        // disable each child that isn't the snack we want
+        foreach (Transform child in transform)
+        {
+            if (child.name != snackName)
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
     }
     
-    public void Init(Vector3 pos, Vector3 velocity)
+    public void Init(Vector3 pos, Vector3 velocity, SnackType snackType, bool isFrozen)
     {
         transform.position = pos;
-        Init(velocity);
+        Init(velocity, snackType, isFrozen);
     }
 
     public void SetGhost(bool isGhost)
