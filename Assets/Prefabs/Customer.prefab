@@ -208,9 +208,10 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 84762d3decf6fdf4f8e5a88c2561ec9a, type: 3}
   - snackType: 5
     sprite: {fileID: 21300000, guid: 8d63cd5cdc5dd0742b9c579ceb1387e0, type: 3}
+  - snackType: 2
+    sprite: {fileID: 21300000, guid: 69e7e50695200df44a2d291ebb6b7423, type: 3}
   startColor: {r: 0, g: 1, b: 0, a: 1}
   endColor: {r: 1, g: 0, b: 0, a: 1}
-  audioSource: {fileID: 0}
   orderCorrectSounds: []
   orderIncorrectSounds: []
 --- !u!1 &5007346340636564618

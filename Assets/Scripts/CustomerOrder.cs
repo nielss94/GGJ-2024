@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class CustomerOrder : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class CustomerOrder : MonoBehaviour
     
     private Camera mainCamera;
     private float startTime;
-    private AudioSource audioSource;
+    private AudioManager audioManager;
     
     private void Start()
     {
@@ -33,6 +34,7 @@ public class CustomerOrder : MonoBehaviour
         mainCamera = Camera.main;
         canvas.worldCamera = mainCamera;
         startTime = Time.time;
+        audioManager = AudioManager.Instance;
     }
     
     public void OnSnackHit(SnackType snackType)
@@ -41,17 +43,19 @@ public class CustomerOrder : MonoBehaviour
         {
             Debug.Log("Order correct");
             OnOrderCorrect();
+            if (orderCorrectSounds.Length > 0) audioManager.PlayClip(orderCorrectSounds[Random.Range(0, orderCorrectSounds.Length)], transform.position, 1f, true, 0.2f);
         }
         else
         {
             Debug.Log("Order incorrect");
             OnOrderIncorrect();
-            
+            if (orderIncorrectSounds.Length > 0) audioManager.PlayClip(orderIncorrectSounds[Random.Range(0, orderIncorrectSounds.Length)], transform.position, 1f, true, 0.2f);
         }
     }
 
     private void Update()
     {
+        if (mainCamera == null) mainCamera = Camera.main;
         canvas.transform.LookAt(mainCamera.transform);
         timerFill.fillAmount = (Time.time - startTime) / patienceTimeSeconds;
         timerFill.color = Color.Lerp(startColor, endColor, timerFill.fillAmount);
@@ -66,7 +70,7 @@ public class CustomerOrder : MonoBehaviour
             // Snack hit body, bad!
             Debug.Log("Order incorrect");
             OnOrderIncorrect();
-            
+            if (orderIncorrectSounds.Length > 0) audioManager.PlayClip(orderIncorrectSounds[Random.Range(0, orderIncorrectSounds.Length)], transform.position, 1f, true, 0.2f);
             Destroy(projectile.gameObject);    
         }
     }

@@ -18,12 +18,10 @@ public class CustomerManager : MonoBehaviour
     private float maxSpawnInterval = 10f;
     private float lastSpawnTime;
     private LevelProgressionManager levelProgressionManager;
-    private AudioSource audioSource;
     
     private void Start()
     {
         lastSpawnTime = Time.time;
-        audioSource = GetComponent<AudioSource>();
     }
 
     public void Init(float minSpawnInterval, float maxSpawnInterval, LevelProgressionManager levelProgressionManager)
@@ -51,9 +49,7 @@ public class CustomerManager : MonoBehaviour
         customers.Add(customer);
         
         OnCustomerSpawned(customer);
-        audioSource.clip = customerSpawnSound[Random.Range(0, customerSpawnSound.Length)];
-        audioSource.pitch = Random.Range(0.8f, 1.2f);
-        audioSource.Play();
+        AudioManager.Instance.PlayClip(customerSpawnSound[Random.Range(0, customerSpawnSound.Length)], customerSpawnPoint.position, 1f, true, 0.2f);
     }
     
 }
