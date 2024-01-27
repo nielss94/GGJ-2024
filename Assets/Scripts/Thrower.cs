@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class Thrower : MonoBehaviour
 {
+    public event Action OnStartThrow = delegate {};
+    public event Action OnEndThrow = delegate {};
     public event Action<float> OnUpdateThrowForce = delegate {}; // throwforce from 0 to 1 
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform projectileSpawn;
@@ -23,6 +25,13 @@ public class Thrower : MonoBehaviour
         inputActionAsset = new SnackbarInput();
         inputActionAsset.Ingame.Shoot.Enable();
         inputActionAsset.Ingame.Shoot.canceled += OnShoot;
+        inputActionAsset.Ingame.Shoot.started += ctx =>
+        {
+            if (playerInventory.HoldingFriedSnack)
+            {
+                OnStartThrow();
+            }
+        };
     }
     
     private void Start()
@@ -49,6 +58,10 @@ public class Thrower : MonoBehaviour
     
     private void OnShoot(InputAction.CallbackContext context)
     {
+        if (playerInventory.HoldingFriedSnack)
+        {
+            OnEndThrow();
+        }
         if (!playerInventory.HoldingFriedSnack && !playerInventory.HoldingFrozenSnack)
         {
             return;
