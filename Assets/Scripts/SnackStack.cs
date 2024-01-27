@@ -8,7 +8,7 @@ public enum SnackType
     Kaassouffle,
     Bamischijf,
     Mexicano,
-    Bitterbal,
+    Bitterballen,
     Friet
 }
 
