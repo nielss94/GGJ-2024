@@ -5148,7 +5148,7 @@ PrefabInstance:
     - target: {fileID: 3574161084758621624, guid: de38a35c8066765438a361ef94452efa,
         type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: OrderTimer
       objectReference: {fileID: 0}
     - target: {fileID: 4407321214526266433, guid: de38a35c8066765438a361ef94452efa,
         type: 3}
