@@ -354,36 +354,6 @@ MonoBehaviour:
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
   m_ObsoleteContactShadows: 0
---- !u!1 &258722631 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8394372464246520302, guid: 7fe031c2580054f69ae299c5f1ad0238,
-    type: 3}
-  m_PrefabInstance: {fileID: 6664217727516194676}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &258722633
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258722631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 1.18, y: 1.16, z: -0.2}
-  VerticalArmLength: 1.09
-  CameraSide: 1
-  CameraDistance: 2.11
-  CameraCollisionFilter:
-    serializedVersion: 2
-    m_Bits: 0
-  IgnoreTag: 
-  CameraRadius: 0.2
-  DampingIntoCollision: 0
-  DampingFromCollision: 2
 --- !u!114 &405619601 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7624824189795585340, guid: d58b2ac9bfa814293aa8bc413a8fff2d,
@@ -2397,20 +2367,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1691229374}
-    - target: {fileID: 7342084491760475780, guid: 7fe031c2580054f69ae299c5f1ad0238,
-        type: 3}
-      propertyPath: m_LookAt
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5715781956604680500, guid: 7fe031c2580054f69ae299c5f1ad0238, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8394372464246520302, guid: 7fe031c2580054f69ae299c5f1ad0238,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 258722633}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fe031c2580054f69ae299c5f1ad0238, type: 3}
 --- !u!1001 &7819201880217692554
 PrefabInstance:

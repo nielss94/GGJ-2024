@@ -25,14 +25,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5875268083519793723}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21330221, y: -0.08056918, z: 0.017653428, w: 0.97349846}
+  m_LocalRotation: {x: 0.21329859, y: -0.08056648, z: 0.017652519, w: 0.9734994}
   m_LocalPosition: {x: 1.1580687, y: 2.69, z: -3.0770078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3210870486682852121}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.717, y: -9.462, z: 0}
 --- !u!114 &7342084491760475780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 3210870486682852121}
   - component: {fileID: 1770682091949934478}
   - component: {fileID: 8855903687768452525}
-  - component: {fileID: 5715781956604680500}
+  - component: {fileID: 611504905044114172}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
---- !u!114 &5715781956604680500
+--- !u!114 &611504905044114172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,10 +165,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0.5, y: 1, z: -1}
-  VerticalArmLength: 0.4
+  ShoulderOffset: {x: 1.18, y: 1.16, z: -0.2}
+  VerticalArmLength: 1.09
   CameraSide: 1
-  CameraDistance: 2
+  CameraDistance: 2.11
   CameraCollisionFilter:
     serializedVersion: 2
     m_Bits: 0
