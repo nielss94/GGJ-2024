@@ -16,8 +16,8 @@ public class LevelProgressionManager : MonoBehaviour
 
     private void Start()
     {
-        var customersPerSecondMin = totalCustomers / (levelDurationMinutes * 60 * 0.8f);
-        var customersPerSecondMax = totalCustomers / (levelDurationMinutes * 60);
+        var customersPerSecondMin = (levelDurationMinutes * 60 * 0.8f) / totalCustomers;
+        var customersPerSecondMax = (levelDurationMinutes * 60) / totalCustomers;
         
         customerManager.Init(customersPerSecondMin, customersPerSecondMax, this);
         

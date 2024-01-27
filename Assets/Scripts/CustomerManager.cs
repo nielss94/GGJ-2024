@@ -1,15 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CustomerManager : MonoBehaviour
 {
+    public event Action<Customer> OnCustomerSpawned = delegate {  };
+    
     public List<Transform> travelPoints = new List<Transform>();
-    
     public Transform customerSpawnPoint;
-    
     public List<Customer> customers = new List<Customer>();
-    
     public Customer customerPrefab;
     
     private float minSpawnInterval = 5f;
@@ -45,6 +46,8 @@ public class CustomerManager : MonoBehaviour
         customer.gameObject.GetComponent<CustomerOrder>().OnOrderIncorrect += levelProgressionManager.OnCustomerMiss;
         customer.gameObject.GetComponent<CustomerOrder>().OnOrderCorrect += levelProgressionManager.OnCustomerHit;
         customers.Add(customer);
+        
+        OnCustomerSpawned(customer);
     }
     
 }
