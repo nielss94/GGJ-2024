@@ -11,6 +11,7 @@ public class Thrower : MonoBehaviour
     public event Action<float> OnUpdateThrowForce = delegate {}; // throwforce from 0 to 1 
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform projectileSpawn;
+    [SerializeField] private Vector3 projectileLookAtOffset;
     [SerializeField] private float maxThrowForce = 100;
     [SerializeField] private float minThrowForce = 0;
     [SerializeField] private float throwForce = 100;
@@ -42,6 +43,8 @@ public class Thrower : MonoBehaviour
 
     private void Update()
     {
+        projectileSpawn.LookAt((Camera.main.transform.position + Camera.main.transform.forward.normalized * 5) + projectileLookAtOffset);
+        
         var shootInput = inputActionAsset.Ingame.Shoot.ReadValue<float>();
         if (shootInput > 0 && (playerInventory.HoldingFriedSnack || playerInventory.HoldingFrozenSnack))
         {
@@ -54,6 +57,10 @@ public class Thrower : MonoBehaviour
             }
             
             OnUpdateThrowForce(throwForce / maxThrowForce);
+        }
+        else
+        {
+            projector.ClearTrajectory();
         }
     }
     
