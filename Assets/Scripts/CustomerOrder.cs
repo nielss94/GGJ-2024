@@ -1,21 +1,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CustomerOrder : MonoBehaviour
 {
-    public SnackType snackType;
-    [SerializeField] private Canvas canvas;
-    
     public event Action OnOrderCorrect = delegate {  };
     public event Action OnOrderIncorrect = delegate {  };
     
-    Camera mainCamera;
+    public SnackType snackType;
+    [SerializeField] private Canvas canvas;
+    [SerializeField] private Image timerFill;
+    [SerializeField] private Image snackImage;
+    [SerializeField] private List<SnackOption> snackSprites;
+    [SerializeField] private Color startColor = Color.green;
+    [SerializeField] private Color endColor = Color.red;
+    
+    private Camera mainCamera;
+    
     private void Awake()
     {
         Array values = Enum.GetValues(typeof(SnackType));
         snackType = (SnackType)values.GetValue(UnityEngine.Random.Range(0, values.Length));
+        snackImage.sprite = snackSprites.First(x => x.snackType == snackType).sprite;
         mainCamera = Camera.main;
         canvas.worldCamera = mainCamera;
     }

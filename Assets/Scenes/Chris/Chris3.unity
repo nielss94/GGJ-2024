@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2164.0256, g: 2269.8557, b: 3293.8872, a: 1}
+  m_IndirectSpecularColor: {r: 2162.6829, g: 2268.6604, b: 3292.8794, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2904,6 +2904,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 259746494}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1786553388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505043330716196347, guid: 913cde9fde84b4398beb502439893bbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 7928908174933104831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1811343187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3331,12 +3337,109 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7928908174933104831}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1786553388}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8872d0cf2667647d08d2762f52f52cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &2076006887
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786553388}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 9.7
+  MaxDistance: 500.59
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &2106567287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3880,6 +3983,21 @@ PrefabInstance:
       propertyPath: 'travelPoints.Array.data[8]'
       value: 
       objectReference: {fileID: 1426288455}
+    - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
+        type: 3}
+      propertyPath: customerSpawnSound.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
+        type: 3}
+      propertyPath: 'customerSpawnSound.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bc57305b30d8ba4c898109b4cd4e2d5, type: 3}
+    - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
+        type: 3}
+      propertyPath: 'customerSpawnSound.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 423285ac17df3914a94ec7215c6b0540, type: 3}
     - target: {fileID: 5573536268093982016, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3933,7 +4051,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1505043330716196347, guid: 913cde9fde84b4398beb502439893bbc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2076006887}
   m_SourcePrefab: {fileID: 100100000, guid: 913cde9fde84b4398beb502439893bbc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
