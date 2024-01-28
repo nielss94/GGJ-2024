@@ -177,12 +177,15 @@ MonoBehaviour:
     sceneToBakingSet:
       m_Keys:
       - 9e60d4fc41a274d7089f70c5d7ed3e56
+      - 04539ded430014fbcbb04316de835fa2
       - 383a1e83932e84554ae23d864ff7ca51
       m_Values:
       - {fileID: 11400000, guid: e84eaec938ba5497ebddd29c66b8dce6, type: 2}
+      - {fileID: 11400000, guid: 383e14ac2e6a97843ba6dce68730c726, type: 2}
       - {fileID: 11400000, guid: ddd4fdff2e74db648988653599a37bde, type: 2}
     bakingSets:
     - {fileID: 11400000, guid: e84eaec938ba5497ebddd29c66b8dce6, type: 2}
+    - {fileID: 11400000, guid: 383e14ac2e6a97843ba6dce68730c726, type: 2}
     - {fileID: 11400000, guid: ddd4fdff2e74db648988653599a37bde, type: 2}
     sceneBounds:
       m_Keys:
@@ -198,8 +201,8 @@ MonoBehaviour:
         m_Extent: {x: 81, y: 81, z: 81}
       - m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 81, y: 81, z: 81}
-      - m_Center: {x: NaN, y: NaN, z: NaN}
-        m_Extent: {x: NaN, y: NaN, z: NaN}
+      - m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 81, y: 81, z: 81}
       - m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 81, y: 81, z: 81}
     hasProbeVolumes:

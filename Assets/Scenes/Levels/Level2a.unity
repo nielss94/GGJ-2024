@@ -1462,7 +1462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bakingSet: {fileID: 11400000, guid: 383e14ac2e6a97843ba6dce68730c726, type: 2}
-  sceneGUID: 04539ded430014fbcbb04316de835fa2
+  sceneGUID: 2bd6d839e4a4747afb3c22b01ebf0a43
   obsoleteAsset: {fileID: 0}
   obsoleteCellSharedDataAsset: {fileID: 0}
   obsoleteCellSupportDataAsset: {fileID: 0}
@@ -1675,8 +1675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74480a712f2faf64180f38ba9058c8a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalCustomers: 30
-  levelDurationMinutes: 5
+  totalCustomers: 25
+  levelDurationMinutes: 4
   customerHitScore: 10
   customerMissScore: -5
   tier2ScorePercentage: 0.5
@@ -3222,7 +3222,7 @@ PrefabInstance:
     - target: {fileID: 4770485706353579344, guid: 74b95f68356fd7745a6840cc7c923348,
         type: 3}
       propertyPath: hasNextLevel
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4770485706353579344, guid: 74b95f68356fd7745a6840cc7c923348,
         type: 3}

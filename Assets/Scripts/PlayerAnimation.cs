@@ -34,6 +34,7 @@ public class PlayerAnimation : MonoBehaviour
             
             StartCoroutine(SetAfterSeconds(0.5f, "Throw", false));
         };
+
         
         playerInventory.OnHoldSnack += () =>
         {
@@ -44,6 +45,8 @@ public class PlayerAnimation : MonoBehaviour
         {
             animator.SetLayerWeight(1, 0);
         };
+        
+        
     }
 
     private void Update()

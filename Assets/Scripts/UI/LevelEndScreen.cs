@@ -87,6 +87,7 @@ public class LevelEndScreen : MonoBehaviour
     public void OnMainMenuClicked()
     {
         SceneManager.LoadScene(mainMenuSceneName);
+        
     }
 
     public void OnNextLevelClicked()
