@@ -124,11 +124,8 @@ MonoBehaviour:
   snackType: 6
   currentSnack: {fileID: 0}
   snackHolder: {fileID: 1779739609213046136}
-  fridgeOptions:
-  - snackType: 6
-    prefab: {fileID: 919132149155446097, guid: 1ba4c49a3267643d6847787c753021a0, type: 3}
-  - snackType: 0
-    prefab: {fileID: 919132149155446097, guid: 4d285087f2cee9341902d135fb662969, type: 3}
+  drinkPrefab: {fileID: 919132149155446097, guid: faf4c31ec5cfd4441b9cac71a4fba2a7,
+    type: 3}
 --- !u!1 &5397049840585390035
 GameObject:
   m_ObjectHideFlags: 0

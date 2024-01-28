@@ -10,7 +10,7 @@ public class Fridge : MonoBehaviour
     public GameObject currentSnack;
     [SerializeField] private Transform snackHolder;
 
-    public List<FridgeOption> fridgeOptions = new List<FridgeOption>();
+    public GameObject drinkPrefab;
     
     private void Start()
     {
@@ -19,16 +19,6 @@ public class Fridge : MonoBehaviour
 
     public void SpawnSnack()
     {
-        var prefab = fridgeOptions.Find(x => x.snackType == snackType).prefab;
-        currentSnack = Instantiate(prefab, snackHolder.position, Quaternion.identity, snackHolder);
+        currentSnack = Instantiate(drinkPrefab, snackHolder.position, Quaternion.identity, snackHolder);
     }
-
-    
-}
-
-[System.Serializable]
-public class FridgeOption
-{
-    public SnackType snackType;
-    public GameObject prefab;
 }
