@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -15,7 +16,13 @@ public class LevelEndScreen : MonoBehaviour
     [SerializeField] private Image[] stars;
     [SerializeField] private string mainMenuSceneName = "Menu";
     [SerializeField] private bool hasNextLevel = true;
-    
+
+    private SnackbarInput inputActionAsset;
+
+    private void Awake()
+    {
+        inputActionAsset = new SnackbarInput();
+    }
 
     private void Start()
     {
@@ -27,7 +34,15 @@ public class LevelEndScreen : MonoBehaviour
     {
         mainPanel.SetActive(true);
         
-        // TODO: stop game/input
+        EventSystem.current.SetSelectedGameObject(nextLevelButton.gameObject);
+        
+        inputActionAsset.Ingame.Disable();
+        inputActionAsset.Ingame.Look.Disable();
+        inputActionAsset.Ingame.Shoot.Disable();
+        inputActionAsset.Ingame.Interact.Disable();
+        
+        Time.timeScale = 0;
+        
         Cursor.lockState = CursorLockMode.None;
         
         var score = levelProgressionManager.CurrentScore;

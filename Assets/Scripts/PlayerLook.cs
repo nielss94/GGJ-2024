@@ -80,8 +80,8 @@ public class PlayerLook : MonoBehaviour
         Vector2 input = inputActionAsset.Ingame.Look.ReadValue<Vector2>();
         
         // Increment the yRotation with input scaled by rotation speed
-        yRotation += input.x * rotationSpeed;
-        xRotation += -input.y * rotationSpeed;
+        yRotation += input.x * rotationSpeed * Time.deltaTime;
+        xRotation += -input.y * rotationSpeed * Time.deltaTime;
 
         xRotation = Mathf.Clamp(xRotation, lookMinXRotation, lookMaxXRotation);
         // Apply the rotation

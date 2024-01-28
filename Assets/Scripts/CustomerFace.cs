@@ -7,6 +7,8 @@ public class CustomerFace : MonoBehaviour
 {
     private Customer customer;
     private CustomerManager customerManager;
+    
+    [SerializeField] private ParticleSystem particlePrefab;
 
     private void Start()
     {
@@ -24,6 +26,12 @@ public class CustomerFace : MonoBehaviour
             
             customer.gameObject.GetComponent<CustomerOrder>().OnSnackHit(projectile.snackType);
             customerManager.Haha();
+
+            if (particlePrefab)
+            {
+                var particle = Instantiate(particlePrefab, transform.position, Quaternion.identity);
+                Destroy(particle, 2f);
+            }
             
             Destroy(projectile.gameObject);
         }

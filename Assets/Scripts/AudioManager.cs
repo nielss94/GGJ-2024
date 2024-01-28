@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayClip(AudioClip clip, AudioType audioType, Vector3 position, float pitch = 1f, bool randomPitch = false, float randomPitchRange = 0.2f)
+    public void PlayClip(AudioClip clip, AudioType audioType, Vector3 position, float pitch = 1f, bool randomPitch = false, float randomPitchRange = 0.2f, float volume = 1f, float spatialBlend = 0f) 
     {
         AudioSource audioSource = Instantiate(audioSourcePrefab, position, Quaternion.identity);
         
@@ -71,7 +71,7 @@ public class AudioManager : MonoBehaviour
         Destroy(audioSource.gameObject, clip.length);
     }
     
-    public IEnumerator PlayMultipleClips(int amount, AudioClip[] clips, AudioType audioType, Vector3 position, float pitch = 1f, bool randomPitch = false, float randomPitchRange = 0.2f)
+    public IEnumerator PlayMultipleClips(int amount, AudioClip[] clips, AudioType audioType, Vector3 position, float pitch = 1f, bool randomPitch = false, float randomPitchRange = 0.2f, float volume = 1f, float spatialBlend = 0f)
     {
         for (int i = 0; i < amount; i++)
         {
