@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 71.79125, g: 75.72617, b: 100.74257, a: 1}
+  m_IndirectSpecularColor: {r: 79.861275, g: 73.4051, b: 77.23084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -496,6 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 1258319210}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: [{id: 0, category: 0, gameObject: {fileID: 1843215074}}]
 --- !u!4 &425353274
 Transform:
   m_ObjectHideFlags: 19
@@ -999,6 +1000,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &972826697 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+    type: 3}
+  m_PrefabInstance: {fileID: 1243834282044999341}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1041345189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,8 +1918,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 526382414087873589, guid: fa667ee94f5be49d9a13a316e0c51bc7,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.592
+      objectReference: {fileID: 0}
+    - target: {fileID: 526382414087873589, guid: fa667ee94f5be49d9a13a316e0c51bc7,
+        type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0.71
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 556349462035842026, guid: fa667ee94f5be49d9a13a316e0c51bc7,
         type: 3}
@@ -2177,6 +2189,7 @@ MonoBehaviour:
   m_Script: {fileID: 1879428746}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &1696083357
 Transform:
   m_ObjectHideFlags: 19
@@ -2492,137 +2505,137 @@ PrefabInstance:
       objectReference: {fileID: 8900000, guid: da5985a107d0ea34e9af4298d8634b9b, type: 3}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[ 0]'
+      propertyPath: m_SHForNormalization.sh[ 0]
       value: 38.749004
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[ 1]'
+      propertyPath: m_SHForNormalization.sh[ 1]
       value: -23.602982
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[ 2]'
+      propertyPath: m_SHForNormalization.sh[ 2]
       value: 7.887403
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[ 3]'
+      propertyPath: m_SHForNormalization.sh[ 3]
       value: 4.618209
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[ 4]'
+      propertyPath: m_SHForNormalization.sh[ 4]
       value: -0.37336996
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[ 5]'
+      propertyPath: m_SHForNormalization.sh[ 5]
       value: -4.5373845
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[ 6]'
+      propertyPath: m_SHForNormalization.sh[ 6]
       value: -3.598116
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[ 7]'
+      propertyPath: m_SHForNormalization.sh[ 7]
       value: 4.790186
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[ 8]'
+      propertyPath: m_SHForNormalization.sh[ 8]
       value: -1.4906843
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[ 9]'
+      propertyPath: m_SHForNormalization.sh[ 9]
       value: 28.491447
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[10]'
+      propertyPath: m_SHForNormalization.sh[10]
       value: -16.63651
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[11]'
+      propertyPath: m_SHForNormalization.sh[11]
       value: 5.640996
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[12]'
+      propertyPath: m_SHForNormalization.sh[12]
       value: 2.7645051
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[13]'
+      propertyPath: m_SHForNormalization.sh[13]
       value: -0.35273698
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[14]'
+      propertyPath: m_SHForNormalization.sh[14]
       value: -3.7868497
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[15]'
+      propertyPath: m_SHForNormalization.sh[15]
       value: -2.6391747
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[16]'
+      propertyPath: m_SHForNormalization.sh[16]
       value: 3.0745535
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[17]'
+      propertyPath: m_SHForNormalization.sh[17]
       value: -0.42121837
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[18]'
+      propertyPath: m_SHForNormalization.sh[18]
       value: 19.304873
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[19]'
+      propertyPath: m_SHForNormalization.sh[19]
       value: -10.435824
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[20]'
+      propertyPath: m_SHForNormalization.sh[20]
       value: 3.791111
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[21]'
+      propertyPath: m_SHForNormalization.sh[21]
       value: 2.3421977
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[22]'
+      propertyPath: m_SHForNormalization.sh[22]
       value: -0.27787238
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[23]'
+      propertyPath: m_SHForNormalization.sh[23]
       value: -3.06534
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[24]'
+      propertyPath: m_SHForNormalization.sh[24]
       value: -1.7938055
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[25]'
+      propertyPath: m_SHForNormalization.sh[25]
       value: 1.4820999
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
-      propertyPath: 'm_SHForNormalization.sh[26]'
+      propertyPath: m_SHForNormalization.sh[26]
       value: 0.6889865
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3028,12 +3041,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c49331132c65e144a89b73d79c91b07, type: 3}
---- !u!4 &2055757398 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3719711178005893458, guid: 7c49331132c65e144a89b73d79c91b07,
-    type: 3}
-  m_PrefabInstance: {fileID: 2055757397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2089298726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3353,6 +3360,74 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2089298726}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1243834282044999341
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1230016347886401347, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_Name
+      value: TrajectoryColliders
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2d9eb786bee1794cb077b735c15dced, type: 3}
 --- !u!1001 &2973800973697443174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3458,10 +3533,15 @@ PrefabInstance:
         type: 3}
       propertyPath: obstaclesParent
       value: 
-      objectReference: {fileID: 2055757398}
+      objectReference: {fileID: 972826697}
     - target: {fileID: 335891024848248692, guid: 6427d6d2f091e475c9ac0ec99309e759,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008752949380513570, guid: 6427d6d2f091e475c9ac0ec99309e759,
+        type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1504905718964003867, guid: 6427d6d2f091e475c9ac0ec99309e759,
@@ -3972,47 +4052,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'travelPoints.Array.data[0]'
+      propertyPath: travelPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1761741615}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'travelPoints.Array.data[1]'
+      propertyPath: travelPoints.Array.data[1]
       value: 
       objectReference: {fileID: 770967104}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'travelPoints.Array.data[2]'
+      propertyPath: travelPoints.Array.data[2]
       value: 
       objectReference: {fileID: 518814204}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'travelPoints.Array.data[3]'
+      propertyPath: travelPoints.Array.data[3]
       value: 
       objectReference: {fileID: 748971042}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'travelPoints.Array.data[4]'
+      propertyPath: travelPoints.Array.data[4]
       value: 
       objectReference: {fileID: 1352827398}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'travelPoints.Array.data[5]'
+      propertyPath: travelPoints.Array.data[5]
       value: 
       objectReference: {fileID: 513124303}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'travelPoints.Array.data[6]'
+      propertyPath: travelPoints.Array.data[6]
       value: 
       objectReference: {fileID: 1248793277}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'travelPoints.Array.data[7]'
+      propertyPath: travelPoints.Array.data[7]
       value: 
       objectReference: {fileID: 634070567}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'travelPoints.Array.data[8]'
+      propertyPath: travelPoints.Array.data[8]
       value: 
       objectReference: {fileID: 1426288455}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
@@ -4027,87 +4107,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerSpawnSound.Array.data[0]'
+      propertyPath: customerSpawnSound.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 8bc57305b30d8ba4c898109b4cd4e2d5, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerSpawnSound.Array.data[1]'
+      propertyPath: customerSpawnSound.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 423285ac17df3914a94ec7215c6b0540, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[0]'
+      propertyPath: customerLaughSounds.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 4ae3f3416f48a004cb6977ec3610846a, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[1]'
+      propertyPath: customerLaughSounds.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 9c3be3cafc1e3544cb90d7584bae2d06, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[2]'
+      propertyPath: customerLaughSounds.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 8450c6974c8c4b741841b888dbb9de51, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[3]'
+      propertyPath: customerLaughSounds.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: b17dc69e76b96a6499d7822c43af3928, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[4]'
+      propertyPath: customerLaughSounds.Array.data[4]
       value: 
       objectReference: {fileID: 8300000, guid: 3a1cfb6c23851974baf72774f0dafcc3, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[5]'
+      propertyPath: customerLaughSounds.Array.data[5]
       value: 
       objectReference: {fileID: 8300000, guid: def416adfa9599d42af5f4551a150bd7, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[6]'
+      propertyPath: customerLaughSounds.Array.data[6]
       value: 
       objectReference: {fileID: 8300000, guid: fafa5bb2f715f164aabaa8181e05a884, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[7]'
+      propertyPath: customerLaughSounds.Array.data[7]
       value: 
       objectReference: {fileID: 8300000, guid: 6f91374e0f19b6844a008f6320b05532, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[8]'
+      propertyPath: customerLaughSounds.Array.data[8]
       value: 
       objectReference: {fileID: 8300000, guid: f84560c14f094df46a7178a8e3fd0e18, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[9]'
+      propertyPath: customerLaughSounds.Array.data[9]
       value: 
       objectReference: {fileID: 8300000, guid: 6e199b7835f6c1e46b8ce9ed92cf73e3, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[10]'
+      propertyPath: customerLaughSounds.Array.data[10]
       value: 
       objectReference: {fileID: 8300000, guid: 32a0b611757ee914cbb263a0aa4603d5, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[11]'
+      propertyPath: customerLaughSounds.Array.data[11]
       value: 
       objectReference: {fileID: 8300000, guid: 4a38e3997f9b94a40a134cf520101419, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[12]'
+      propertyPath: customerLaughSounds.Array.data[12]
       value: 
       objectReference: {fileID: 8300000, guid: 8f501c784fe2d2848b21c35e3d506b67, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[13]'
+      propertyPath: customerLaughSounds.Array.data[13]
       value: 
       objectReference: {fileID: 8300000, guid: d5002424265505e45999930ece1b07dd, type: 3}
     - target: {fileID: 4141362655066719925, guid: 913cde9fde84b4398beb502439893bbc,
         type: 3}
-      propertyPath: 'customerLaughSounds.Array.data[14]'
+      propertyPath: customerLaughSounds.Array.data[14]
       value: 
       objectReference: {fileID: 8300000, guid: c8af7b4f446a85544af6b8c307d51287, type: 3}
     - target: {fileID: 5573536268093982016, guid: 913cde9fde84b4398beb502439893bbc,
@@ -4213,3 +4293,4 @@ SceneRoots:
   - {fileID: 1696083357}
   - {fileID: 1768188078}
   - {fileID: 4648907788287529181}
+  - {fileID: 1243834282044999341}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 80.9524, g: 75.28199, b: 80.564705, a: 1}
+  m_IndirectSpecularColor: {r: 79.861275, g: 73.4051, b: 77.23084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1634,6 +1634,74 @@ MonoScript:
   m_ClassName: SceneObjectIDMapSceneAsset
   m_Namespace: UnityEngine.Rendering.HighDefinition
   m_AssemblyName: Unity.RenderPipelines.HighDefinition.Runtime
+--- !u!1001 &1270834832
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1230016347886401347, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_Name
+      value: TrajectoryColliders
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2d9eb786bee1794cb077b735c15dced, type: 3}
 --- !u!114 &1299858126 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7342084491760475780, guid: 7fe031c2580054f69ae299c5f1ad0238,
@@ -3030,12 +3098,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c49331132c65e144a89b73d79c91b07, type: 3}
---- !u!4 &2055757398 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3719711178005893458, guid: 7c49331132c65e144a89b73d79c91b07,
-    type: 3}
-  m_PrefabInstance: {fileID: 2055757397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2089298726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3465,7 +3527,8 @@ PrefabInstance:
         type: 3}
       propertyPath: obstaclesParent
       value: 
-      objectReference: {fileID: 2055757398}
+      objectReference: {fileID: 9011971107138423128, guid: c2d9eb786bee1794cb077b735c15dced,
+        type: 3}
     - target: {fileID: 335891024848248692, guid: 6427d6d2f091e475c9ac0ec99309e759,
         type: 3}
       propertyPath: m_Enabled
@@ -4220,3 +4283,4 @@ SceneRoots:
   - {fileID: 1696083357}
   - {fileID: 1768188078}
   - {fileID: 4648907788287529181}
+  - {fileID: 1270834832}
