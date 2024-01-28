@@ -221,10 +221,25 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 8d63cd5cdc5dd0742b9c579ceb1387e0, type: 3}
   - snackType: 2
     sprite: {fileID: 21300000, guid: 69e7e50695200df44a2d291ebb6b7423, type: 3}
+  - snackType: 6
+    sprite: {fileID: 21300000, guid: 9c0f77b6871ce224096604b0507a2c12, type: 3}
   startColor: {r: 0, g: 1, b: 0, a: 1}
   endColor: {r: 1, g: 0, b: 0, a: 1}
-  orderCorrectSounds: []
-  orderIncorrectSounds: []
+  orderCorrectSounds:
+  - {fileID: 8300000, guid: 485e8f34ee0a210419ca1e54b20520e5, type: 3}
+  - {fileID: 8300000, guid: f54fe3a5b2310aa408673ed85a5af5bc, type: 3}
+  - {fileID: 8300000, guid: 706a818e1e0ed0f4faa2344877f79377, type: 3}
+  - {fileID: 8300000, guid: 993c86ddb3a551c4b88fcaab544da158, type: 3}
+  - {fileID: 8300000, guid: 24454de0222a7074f83a6b3831fd35b8, type: 3}
+  orderIncorrectSounds:
+  - {fileID: 8300000, guid: 7451a9a3e60b74a449edb47f4b417378, type: 3}
+  - {fileID: 8300000, guid: 77df1546f5796f64283b152abcb1498a, type: 3}
+  - {fileID: 8300000, guid: f49d0cb026df0f84ab191e710ac1178a, type: 3}
+  - {fileID: 8300000, guid: fa5fe602187c4e44c8a9f77129ac0302, type: 3}
+  - {fileID: 8300000, guid: 4ce82b6246a8617428b2ec2109668dec, type: 3}
+  - {fileID: 8300000, guid: fe2b2f2f0d61743b69b53e1ea12c53ee, type: 3}
+  - {fileID: 8300000, guid: 87d9cae8a00544abe9682fda79bdad66, type: 3}
+  - {fileID: 8300000, guid: f0d1c72514f2d4c1cb506ffdf91f7ef7, type: 3}
   angrySounds: []
 --- !u!114 &3643227901981828908
 MonoBehaviour:
@@ -370,6 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particlePrefab: {fileID: 0}
+  hitClips: []
 --- !u!1 &5749191418726235213
 GameObject:
   m_ObjectHideFlags: 0

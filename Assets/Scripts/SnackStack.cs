@@ -10,8 +10,7 @@ public enum SnackType
     Mexicano,
     Bitterballen,
     Friet,
-    Coke,
-    Pepsi
+    Coke
 }
 
 public class SnackStack : MonoBehaviour

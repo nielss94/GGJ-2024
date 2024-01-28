@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using Random = UnityEngine.Random;
 
 public enum AudioType
 {
@@ -33,11 +35,15 @@ public class AudioManager : MonoBehaviour
             ostAudioSource = GetComponent<AudioSource>();
             
             StartCoroutine(PlayOst());
-            
-            music.audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume"));
-            sfx.audioMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("SFXVolume"));
-            master.audioMixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat("MasterVolume"));
+
         }
+    }
+
+    private void Start()
+    {
+        music.audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume", -14));
+        sfx.audioMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("SFXVolume"));
+        master.audioMixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat("MasterVolume"));
     }
 
     private IEnumerator PlayOst()
@@ -59,6 +65,7 @@ public class AudioManager : MonoBehaviour
             pitch = Random.Range(pitch - randomPitchRange, pitch + randomPitchRange);
         }
         
+        audioSource.volume = volume;
         audioSource.pitch = pitch;
         audioSource.outputAudioMixerGroup = audioType switch
         {

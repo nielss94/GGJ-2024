@@ -65,7 +65,7 @@ public class CustomerManager : MonoBehaviour
         for (int i = 0; i < randomCustomer; i++)
         {
             yield return new WaitForSeconds(0.05f);
-            if (customerLaughSounds.Length > 0) AudioManager.Instance.PlayClip(customerLaughSounds[Random.Range(0, customerLaughSounds.Length)], AudioType.SFX, customers[i].transform.position, 1f, true, 0.2f);
+            if (customerLaughSounds.Length > 0) AudioManager.Instance.PlayClip(customerLaughSounds[Random.Range(0, customerLaughSounds.Length)], AudioType.SFX, customers[i].transform.position, 1f, true, 0.2f, .2f);
         }
     }
 

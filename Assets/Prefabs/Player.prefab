@@ -259,9 +259,9 @@ MonoBehaviour:
   virtualCamera: {fileID: 0}
   thrower: {fileID: 6980001116275478327}
   cameraTarget: {fileID: 6313633654697963667}
-  defaultCameraDistance: 3
-  aimCameraDistance: 2.5
-  shootCameraDistance: 2.5
+  defaultCameraDistance: 2.11
+  aimCameraDistance: 1.8
+  shootCameraDistance: 1.5
   cameraDistanceChangeSpeed: 0.5
   lookMinXRotation: -45
   lookMaxXRotation: 45
@@ -281,7 +281,7 @@ MonoBehaviour:
   friedSnack: {fileID: 0}
   frozenSnackHolder: {fileID: 7980660573243809380}
   friedSnackHolder: {fileID: 4560686129330896109}
-  mandRenderer: {fileID: 0}
+  mandRenderer: {fileID: 335891024848248692}
   frozenSnackPrefab: {fileID: 7044582698097076860, guid: 59c1977aecb4c4cc4ab6acacca915c28,
     type: 3}
   friedSnackPrefab: {fileID: -5918806489714501144, guid: 23ae0c13a32474982880c4b269246922,
@@ -441,6 +441,10 @@ MonoBehaviour:
   throwForceRampSpeed: 4
   projector: {fileID: 99816930549950883}
   playerInventory: {fileID: 7067313152492972070}
+  throwSounds:
+  - {fileID: 8300000, guid: dfa35b98142930c4292d33bd4c7a362c, type: 3}
+  - {fileID: 8300000, guid: 85d0eea2860b29d4c856565a1de2bb18, type: 3}
+  - {fileID: 8300000, guid: 0786197e4e306f948932e77292f2c964, type: 3}
 --- !u!114 &99816930549950883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,6 +740,12 @@ PrefabInstance:
       addedObject: {fileID: 4560686129330896109}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 419fc3b23c3d55c41847727e8ae88d5e, type: 3}
+--- !u!23 &335891024848248692 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7999019246180998931, guid: 419fc3b23c3d55c41847727e8ae88d5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7758411899107262567}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1504905718964003867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9171885494097568892, guid: 419fc3b23c3d55c41847727e8ae88d5e,

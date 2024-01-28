@@ -21,6 +21,8 @@ public class Thrower : MonoBehaviour
     [SerializeField] private Projector projector;
     [SerializeField] private PlayerInventory playerInventory;
     
+    [SerializeField] private AudioClip[] throwSounds;
+    
     private SnackbarInput inputActionAsset;
 
     
@@ -94,6 +96,8 @@ public class Thrower : MonoBehaviour
             return;
         }
         OnEndThrow();
+        
+        if (throwSounds.Length > 0) AudioManager.Instance.PlayClip(throwSounds[UnityEngine.Random.Range(0, throwSounds.Length)], AudioType.SFX, transform.position, 1f, true, 0.2f);
         
         var projectile = Instantiate(projectilePrefab, projectileSpawn.position, Quaternion.identity);
         var snackType = playerInventory.HoldingFriedSnack ? playerInventory.friedSnack.snackType : playerInventory.frozenSnack.snackType;

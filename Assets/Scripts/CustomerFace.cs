@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CustomerFace : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class CustomerFace : MonoBehaviour
     private CustomerManager customerManager;
     
     [SerializeField] private ParticleSystem particlePrefab;
+    
+    [SerializeField] private AudioClip[] hitClips;
 
     private void Start()
     {
@@ -32,6 +35,9 @@ public class CustomerFace : MonoBehaviour
                 var particle = Instantiate(particlePrefab, transform.position, Quaternion.identity);
                 Destroy(particle, 2f);
             }
+            
+            if (hitClips.Length > 0) AudioManager.Instance.PlayClip(hitClips[Random.Range(0, hitClips.Length)], AudioType.SFX, transform.position, 1f, true, 0.2f);
+
             
             Destroy(projectile.gameObject);
         }
