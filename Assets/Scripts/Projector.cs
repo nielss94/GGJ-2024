@@ -28,11 +28,17 @@ public class Projector : MonoBehaviour
 
         foreach (Transform obj in obstaclesParent)
         {
+            if (!obj.TryGetComponent(out MeshRenderer meshRenderer))
+            {
+                continue;
+            }
+            
             var ghostObj = Instantiate(obj.gameObject, obj.position, obj.rotation);
             if (ghostObj.TryGetComponent(out Renderer renderer))
             {
                 renderer.enabled = false;
             }
+            
             SceneManager.MoveGameObjectToScene(ghostObj, simulationScene);
         }
     }
