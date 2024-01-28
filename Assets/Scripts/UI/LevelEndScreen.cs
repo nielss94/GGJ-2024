@@ -11,12 +11,16 @@ public class LevelEndScreen : MonoBehaviour
     [SerializeField] private LevelProgressionManager levelProgressionManager;
     [SerializeField] private GameObject mainPanel;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private Button nextLevelButton;    
     [SerializeField] private Image[] stars;
     [SerializeField] private string mainMenuSceneName = "Menu";
+    [SerializeField] private bool hasNextLevel = true;
+    
 
     private void Start()
     {
         levelProgressionManager.OnLevelEnded += OnLevelEnded;
+        nextLevelButton.gameObject.SetActive(hasNextLevel);
     }
 
     private void OnLevelEnded()
@@ -58,7 +62,14 @@ public class LevelEndScreen : MonoBehaviour
 
     public void OnNextLevelClicked()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (!hasNextLevel)
+        {
+            SceneManager.LoadScene(mainMenuSceneName);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
 }

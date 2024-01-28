@@ -399,11 +399,13 @@ MonoBehaviour:
   levelProgressionManager: {fileID: 0}
   mainPanel: {fileID: 5753209366620652201}
   scoreText: {fileID: 7758814040338275436}
+  nextLevelButton: {fileID: 0}
   stars:
   - {fileID: 8654999285451220100}
   - {fileID: 4071512398841488051}
   - {fileID: 8732490239699276302}
   mainMenuSceneName: Menu
+  hasNextLevel: 1
 --- !u!1 &3548101847522349622
 GameObject:
   m_ObjectHideFlags: 0
