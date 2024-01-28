@@ -22,6 +22,8 @@ public class FryingPan : MonoBehaviour
     
     public List<SnackOption> snackOptions = new List<SnackOption>();
     
+    [SerializeField] private AudioSource audioSource;
+    
     private void Awake()
     {        
         mainCamera = Camera.main;
