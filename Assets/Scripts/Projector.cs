@@ -37,6 +37,11 @@ public class Projector : MonoBehaviour
             if (ghostObj.TryGetComponent(out Renderer renderer))
             {
                 renderer.enabled = false;
+                var renderers = renderer.GetComponentsInChildren<Renderer>();
+                foreach (var r in renderers)
+                {
+                    r.enabled = false;
+                }
             }
             
             SceneManager.MoveGameObjectToScene(ghostObj, simulationScene);
