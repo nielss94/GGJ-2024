@@ -107,8 +107,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6518568, y: 1.0309254, z: 1.2410127}
-  m_Center: {x: 0.072143614, y: 0.015462697, z: 0.120506346}
+  m_Size: {x: 1.0538181, y: 1.9417431, z: 2.372457}
+  m_Center: {x: 0.37116295, y: 0.47087157, z: -0.081234515}
 --- !u!114 &195238527398902522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   snackType: 6
   currentSnack: {fileID: 0}
   snackHolder: {fileID: 1779739609213046136}
-  drinkPrefab: {fileID: 919132149155446097, guid: faf4c31ec5cfd4441b9cac71a4fba2a7,
+  drinkPrefab: {fileID: 919132149155446097, guid: 56ff54f659191e04484f5cc27760dd76,
     type: 3}
 --- !u!1 &5397049840585390035
 GameObject:

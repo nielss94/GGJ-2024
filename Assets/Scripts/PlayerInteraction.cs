@@ -61,7 +61,7 @@ public class PlayerInteraction : MonoBehaviour
                     OnLookAtInteraction(null);
                 }
             }
-            else if (hit.transform.TryGetComponent(out Fridge fridge) && fridge.currentSnack != null)
+            else if (hit.transform.TryGetComponent(out Fridge fridge))
             {
                 if (playerInventory.Available)
                 {
