@@ -61,6 +61,22 @@ public class PlayerInteraction : MonoBehaviour
                     OnLookAtInteraction(null);
                 }
             }
+            else if (hit.transform.TryGetComponent(out Fridge fridge) && fridge.currentSnack != null)
+            {
+                if (playerInventory.Available)
+                {
+                    if (inputActionAsset.Ingame.Interact.triggered)
+                    {
+                        playerInventory.TakeFriedSnack(fridge.snackType);
+                    }
+                    
+                    OnLookAtInteraction(fridge.gameObject);
+                }
+                else
+                {
+                    OnLookAtInteraction(null);
+                }
+            }
             else
             {
                 OnLookAtInteraction(null);
