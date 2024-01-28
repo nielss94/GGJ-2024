@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snackType: 0
-  patienceTimeSeconds: 50
+  patienceTimeSeconds: 90
   canvas: {fileID: 2700826685460748217}
   timerFill: {fileID: 2894586493511832146}
   snackImage: {fileID: 7302899759660757414}
