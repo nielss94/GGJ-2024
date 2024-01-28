@@ -37,7 +37,7 @@ public class CustomerOrder : MonoBehaviour
     {
         Array values = Enum.GetValues(typeof(SnackType));
         snackType = (SnackType)values.GetValue(UnityEngine.Random.Range(0, values.Length));
-        snackImage.sprite = snackSprites.First(x => x.snackType == snackType).sprite;
+        snackImage.sprite = snackSprites.FirstOrDefault(x => x.snackType == snackType)?.sprite;
         mainCamera = Camera.main;
         canvas.worldCamera = mainCamera;
         startTime = Time.time;

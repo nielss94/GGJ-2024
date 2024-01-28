@@ -29,6 +29,8 @@ public class LevelProgressionManager : MonoBehaviour
         
         customerManager.Init(customersPerSecondMin, customersPerSecondMax, this);
         
+        Time.timeScale = 1;
+        
         StartCoroutine(WaitAndEndLevel());
     }
     
