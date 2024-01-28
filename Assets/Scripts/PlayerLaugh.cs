@@ -16,7 +16,7 @@ public class PlayerLaugh : MonoBehaviour
         inputActionAsset.Ingame.Laugh.Enable();
         inputActionAsset.Ingame.Laugh.performed += ctx =>
         {
-            StartCoroutine(AudioManager.Instance.PlayMultipleClips(Random.Range(2,4), laughClips, transform.position, playerPitch));
+            StartCoroutine(AudioManager.Instance.PlayMultipleClips(Random.Range(2,4), laughClips, AudioType.SFX, transform.position, playerPitch));
         };
     }
 }

@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractionUI : MonoBehaviour
 {
     [SerializeField] private PlayerInteraction playerInteraction;
     [SerializeField] private TextMeshProUGUI interactionText;
+    [SerializeField] private Image interactionImage;
     private SnackbarInput inputActionAsset;
     private void Awake()
     {
@@ -18,27 +20,32 @@ public class InteractionUI : MonoBehaviour
     {
         if (gameObject == null)
         {
+            interactionImage.enabled = false;
             interactionText.text = "";
             return;
         }
         
         if (gameObject.TryGetComponent(out SnackStack snackStack))
         {
-            interactionText.text = $"Press {inputActionAsset.Ingame.Interact.name} to take frozen {snackStack.SnackType}";
+            interactionImage.enabled = true;
+            interactionText.text = $"{snackStack.SnackType}";
         }
         else if (gameObject.TryGetComponent(out FryingPan fryingPan))
         {
             if (fryingPan.snackReady)
             {
-                interactionText.text = $"Press {inputActionAsset.Ingame.Interact.name} to take fried {fryingPan.currentSnackType}";
+                interactionImage.enabled = true;
+                interactionText.text = $"{fryingPan.currentSnackType}";
             }
             else
             {
-                interactionText.text = $"{fryingPan.currentSnackType} is frying";
+                interactionImage.enabled = false;
+                interactionText.text = "";
             }
         }
         else
         {
+            interactionImage.enabled = false;
             interactionText.text = "";
         }
     }
