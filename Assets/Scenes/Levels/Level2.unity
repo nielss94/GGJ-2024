@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 79.811714, g: 73.358284, b: 77.18061, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 4063ae6797ab6c64b841c7aee14905f6,
+  m_LightingDataAsset: {fileID: 112000000, guid: c9ef9564bc03a1e46bd8052894399f48,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 388fc0393e91e494f9430e8a1281d13e,
     type: 2}
@@ -2408,7 +2408,7 @@ MonoBehaviour:
   m_Entries:
   - id: 0
     category: 0
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1843215074}
 --- !u!4 &1768188078
 Transform:
   m_ObjectHideFlags: 19
@@ -2487,6 +2487,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
+        type: 3}
+      propertyPath: m_BakedTexture
+      value: 
+      objectReference: {fileID: 8900000, guid: 0630218ed6d09a14bb6711ab78386d2e, type: 3}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[ 0]'
@@ -2627,6 +2632,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69d26a58f90e9c445882c90e58d5d601, type: 3}
+--- !u!1 &1843215074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4947796575042292630, guid: 69d26a58f90e9c445882c90e58d5d601,
+    type: 3}
+  m_PrefabInstance: {fileID: 1843215073}
+  m_PrefabAsset: {fileID: 0}
 --- !u!115 &1879428746
 MonoScript:
   m_ObjectHideFlags: 0

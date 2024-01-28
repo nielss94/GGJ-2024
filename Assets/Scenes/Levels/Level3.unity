@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 80.04847, g: 73.51215, b: 77.2591, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 4063ae6797ab6c64b841c7aee14905f6,
+  m_LightingDataAsset: {fileID: 112000000, guid: a14da30ab249bb743a81647ce0cfc51f,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 388fc0393e91e494f9430e8a1281d13e,
     type: 2}
@@ -1461,7 +1461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83d2f7ae04ab6f4f99b0d85377be998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bakingSet: {fileID: 11400000, guid: ddd4fdff2e74db648988653599a37bde, type: 2}
+  bakingSet: {fileID: 11400000, guid: 383e14ac2e6a97843ba6dce68730c726, type: 2}
   sceneGUID: 04539ded430014fbcbb04316de835fa2
   obsoleteAsset: {fileID: 0}
   obsoleteCellSharedDataAsset: {fileID: 0}
@@ -2408,7 +2408,7 @@ MonoBehaviour:
   m_Entries:
   - id: 0
     category: 0
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 1843215074}
 --- !u!4 &1768188078
 Transform:
   m_ObjectHideFlags: 19
@@ -2489,144 +2489,155 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
+      propertyPath: m_BakedTexture
+      value: 
+      objectReference: {fileID: 8900000, guid: 3577e4d61a8d7e042a727b9661280acf, type: 3}
+    - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
+        type: 3}
       propertyPath: 'm_SHForNormalization.sh[ 0]'
-      value: 71.24401
+      value: 39.220356
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[ 1]'
-      value: -31.519737
+      value: -23.682592
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[ 2]'
-      value: 12.405515
+      value: 7.884159
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[ 3]'
-      value: -5.997042
+      value: 3.796087
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[ 4]'
-      value: -4.7595553
+      value: -0.5919673
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[ 5]'
-      value: -11.726929
+      value: -4.638137
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[ 6]'
-      value: -1.9595902
+      value: -3.673442
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[ 7]'
-      value: 7.7764144
+      value: 5.342878
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[ 8]'
-      value: 1.8196585
+      value: -1.335329
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[ 9]'
-      value: 55.220478
+      value: 28.852074
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[10]'
-      value: -20.263706
+      value: -16.71153
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[11]'
-      value: 8.21533
+      value: 5.8422737
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[12]'
-      value: -3.8790495
+      value: 1.7618299
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[13]'
-      value: -2.9203985
+      value: -0.5871404
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[14]'
-      value: -7.502957
+      value: -3.870927
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[15]'
-      value: -1.2956866
+      value: -2.6661894
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[16]'
-      value: 5.2443657
+      value: 3.5845003
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[17]'
-      value: 3.7352946
+      value: -0.35209283
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[18]'
-      value: 39.255627
+      value: 19.61395
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[19]'
-      value: -10.792388
+      value: -10.514214
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[20]'
-      value: 5.243351
+      value: 4.203816
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[21]'
-      value: -2.0362692
+      value: 1.241579
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[22]'
-      value: -1.5317367
+      value: -0.50901693
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[23]'
-      value: -4.2565947
+      value: -3.1557531
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[24]'
-      value: -0.45938918
+      value: -1.7847104
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[25]'
-      value: 3.1729386
+      value: 1.931297
       objectReference: {fileID: 0}
     - target: {fileID: 3613890252227587618, guid: 69d26a58f90e9c445882c90e58d5d601,
         type: 3}
       propertyPath: 'm_SHForNormalization.sh[26]'
-      value: 4.78171
+      value: 0.70562047
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69d26a58f90e9c445882c90e58d5d601, type: 3}
+--- !u!1 &1843215074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4947796575042292630, guid: 69d26a58f90e9c445882c90e58d5d601,
+    type: 3}
+  m_PrefabInstance: {fileID: 1843215073}
+  m_PrefabAsset: {fileID: 0}
 --- !u!115 &1879428746
 MonoScript:
   m_ObjectHideFlags: 0
