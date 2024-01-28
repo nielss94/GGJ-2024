@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     
     public void OnPlay()
     {
-        SceneManager.LoadScene("Niels");
+        SceneManager.LoadScene("Level1");
     }
 
     public void OnOptions()

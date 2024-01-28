@@ -13,6 +13,7 @@ public class LevelEndScreen : MonoBehaviour
     [SerializeField] private GameObject mainPanel;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Button nextLevelButton;    
+    [SerializeField] private Button mainMenuButton;    
     [SerializeField] private Image[] stars;
     [SerializeField] private string mainMenuSceneName = "Menu";
     [SerializeField] private bool hasNextLevel = true;
@@ -36,8 +37,15 @@ public class LevelEndScreen : MonoBehaviour
     private void OnLevelEnded()
     {
         mainPanel.SetActive(true);
-        
-        EventSystem.current.SetSelectedGameObject(nextLevelButton.gameObject);
+
+        if (hasNextLevel)
+        {
+            EventSystem.current.SetSelectedGameObject(nextLevelButton.gameObject);
+        }
+        else
+        {
+            EventSystem.current.SetSelectedGameObject(mainMenuButton.gameObject);
+        }
         
         inputActionAsset.Ingame.Disable();
         inputActionAsset.Ingame.Look.Disable();

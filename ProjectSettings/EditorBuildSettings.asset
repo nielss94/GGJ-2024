@@ -12,7 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 41ca98ac2e6044238849acbd0a04d4c5
   - enabled: 1
-    path: Assets/Scenes/Niels.unity
-    guid: 383a1e83932e84554ae23d864ff7ca51
+    path: Assets/Scenes/Levels/Level1.unity
+    guid: 9e60d4fc41a274d7089f70c5d7ed3e56
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level2.unity
+    guid: cdfb61c14326745e694f6916525f44c7
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level3.unity
+    guid: 04539ded430014fbcbb04316de835fa2
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
