@@ -299,6 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2.5
+  rb: {fileID: 1008752949380513570}
   moveInput: {x: 0, y: 0}
 --- !u!114 &1706130535354048290
 MonoBehaviour:

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 71.79125, g: 75.72617, b: 100.74257, a: 1}
+  m_IndirectSpecularColor: {r: 79.96699, g: 73.44746, b: 77.22297, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -496,6 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 1258319210}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &425353274
 Transform:
   m_ObjectHideFlags: 19
@@ -1911,8 +1912,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 526382414087873589, guid: fa667ee94f5be49d9a13a316e0c51bc7,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.592
+      objectReference: {fileID: 0}
+    - target: {fileID: 526382414087873589, guid: fa667ee94f5be49d9a13a316e0c51bc7,
+        type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0.71
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 556349462035842026, guid: fa667ee94f5be49d9a13a316e0c51bc7,
         type: 3}
@@ -2177,6 +2183,7 @@ MonoBehaviour:
   m_Script: {fileID: 1879428746}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &1696083357
 Transform:
   m_ObjectHideFlags: 19
@@ -3462,6 +3469,11 @@ PrefabInstance:
     - target: {fileID: 335891024848248692, guid: 6427d6d2f091e475c9ac0ec99309e759,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008752949380513570, guid: 6427d6d2f091e475c9ac0ec99309e759,
+        type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1504905718964003867, guid: 6427d6d2f091e475c9ac0ec99309e759,
