@@ -21,7 +21,6 @@ public class CustomerOrder : MonoBehaviour
     [SerializeField] private Color endColor = Color.red;
     [SerializeField] private AudioClip[] orderCorrectSounds;
     [SerializeField] private AudioClip[] orderIncorrectSounds;
-    [SerializeField] private AudioClip[] angrySounds;
     
     private Camera mainCamera;
     private float startTime;
@@ -71,7 +70,7 @@ public class CustomerOrder : MonoBehaviour
         if (timerFill.fillAmount >= 1f && !customer.angry)
         {
             customer.Angry();
-            if (orderIncorrectSounds.Length > 0) audioManager.PlayClip(angrySounds[Random.Range(0, orderIncorrectSounds.Length)], AudioType.SFX, transform.position, 1f, true, 0.2f);
+            if (orderIncorrectSounds.Length > 0) audioManager.PlayClip(orderIncorrectSounds[Random.Range(0, orderIncorrectSounds.Length)], AudioType.SFX, transform.position, 1f, true, 0.2f);
         }
     }
 

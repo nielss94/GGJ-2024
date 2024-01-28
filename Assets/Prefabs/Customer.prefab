@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snackType: 0
-  patienceTimeSeconds: 30
+  patienceTimeSeconds: 50
   canvas: {fileID: 2700826685460748217}
   timerFill: {fileID: 2894586493511832146}
   snackImage: {fileID: 7302899759660757414}
@@ -297,7 +297,7 @@ MonoBehaviour:
   - snackType: 2
     sprite: {fileID: 21300000, guid: 69e7e50695200df44a2d291ebb6b7423, type: 3}
   - snackType: 6
-    sprite: {fileID: 21300000, guid: 9c0f77b6871ce224096604b0507a2c12, type: 3}
+    sprite: {fileID: 21300000, guid: 20dbd048e57d1a04fa752986d377333a, type: 3}
   startColor: {r: 0, g: 1, b: 0, a: 1}
   endColor: {r: 1, g: 0, b: 0, a: 1}
   orderCorrectSounds:
@@ -315,7 +315,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fe2b2f2f0d61743b69b53e1ea12c53ee, type: 3}
   - {fileID: 8300000, guid: 87d9cae8a00544abe9682fda79bdad66, type: 3}
   - {fileID: 8300000, guid: f0d1c72514f2d4c1cb506ffdf91f7ef7, type: 3}
-  angrySounds: []
 --- !u!114 &3643227901981828908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,7 +458,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6063b808dff1a0b4b9abe76ac4595c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlePrefab: {fileID: 0}
+  particlePrefab: {fileID: 6517720724722069651, guid: f1212d1b9a331c54aa6b0e58eb544e07,
+    type: 3}
   hitClips: []
 --- !u!1 &5749191418726235213
 GameObject:

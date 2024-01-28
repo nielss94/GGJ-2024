@@ -17,6 +17,9 @@ public class LevelEndScreen : MonoBehaviour
     [SerializeField] private string mainMenuSceneName = "Menu";
     [SerializeField] private bool hasNextLevel = true;
 
+    [SerializeField] private Sprite starFilled;
+    [SerializeField] private Sprite starEmpty;
+    
     private SnackbarInput inputActionAsset;
 
     private void Awake()
@@ -53,20 +56,23 @@ public class LevelEndScreen : MonoBehaviour
 
     private void SetStars(int score)
     {
-        foreach (var star in stars)
-        {
-            star.enabled = false;
-        }
-        
-        stars[0].enabled = true;
+        stars[0].sprite = starFilled;
         if (score >= levelProgressionManager.Tier2ScoreThreshold)
         {
-            stars[1].enabled = true;
+            stars[1].sprite = starFilled;
+        }
+        else
+        {
+            stars[1].sprite = starEmpty;
         }
 
         if (score >= levelProgressionManager.Tier3ScoreThreshold)
         {
-            stars[2].enabled = true;
+            stars[2].sprite = starFilled;
+        }
+        else
+        {
+            stars[2].sprite = starEmpty;
         }
     }
 
