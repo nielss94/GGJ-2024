@@ -8,7 +8,6 @@ using Random = UnityEngine.Random;
 
 public class Customer : MonoBehaviour
 {
-    [SerializeField] private CustomerFace customerFace;
     
     [SerializeField] private float walkSpeed = 1f;
     private NavMeshAgent navMeshAgent;
@@ -17,7 +16,9 @@ public class Customer : MonoBehaviour
     
     private List<Transform> travelPoints = new List<Transform>();
     [SerializeField] private Material[] materials;
-    
+    [SerializeField] private List<GameObject> hats = new List<GameObject>();
+    [SerializeField] private GameObject sunGlasses;
+    [SerializeField] private float sunGlassChance = 0.05f;
     Coroutine travelCoroutine;
     private void Awake()
     {
@@ -29,6 +30,11 @@ public class Customer : MonoBehaviour
         
         var meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
         meshRenderer.material = materials[Random.Range(0, materials.Length)];
+        
+        sunGlasses.SetActive(Random.value < sunGlassChance);
+        walking = true;
+        var randomHat = Random.Range(0, hats.Count);
+        hats[randomHat].SetActive(true);
     }
     
     private void ContinueWalking()
