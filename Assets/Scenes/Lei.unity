@@ -260,7 +260,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74da837f41f7c864cb0729e05af66a6b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3578435125498228990, guid: 74da837f41f7c864cb0729e05af66a6b,
         type: 3}
@@ -828,13 +828,23 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2b5e9ec3099971f4a879a8169c106b2b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1142337639775674111, guid: 2b5e9ec3099971f4a879a8169c106b2b,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 763edc721acdd3147b600a5c63882dba, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 2b5e9ec3099971f4a879a8169c106b2b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 319bd18a47168eb48ab4aa16b26d6f4e, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 2b5e9ec3099971f4a879a8169c106b2b,
+        type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
