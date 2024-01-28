@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 1
   walking: 1
+  angry: 0
   materials:
   - {fileID: 2100000, guid: 2e575b143de1103489b171faac4a85d2, type: 2}
   - {fileID: 2100000, guid: 5af962758eab7734b9aa35d53f7f3c9e, type: 2}
@@ -224,6 +225,7 @@ MonoBehaviour:
   endColor: {r: 1, g: 0, b: 0, a: 1}
   orderCorrectSounds: []
   orderIncorrectSounds: []
+  angrySounds: []
 --- !u!114 &3643227901981828908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6063b808dff1a0b4b9abe76ac4595c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 0}
 --- !u!1 &5749191418726235213
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ public class SettingsMenu : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(sensitivitySlider.gameObject);
         
-        sensitivitySlider.value = PlayerPrefs.GetFloat("Sensitivity", 10);
+        sensitivitySlider.value = PlayerPrefs.GetFloat("Sensitivity", 60);
         
         masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1);
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1);
