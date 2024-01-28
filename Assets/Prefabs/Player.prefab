@@ -315,6 +315,7 @@ MonoBehaviour:
   animator: {fileID: 4810009607156666958}
   thrower: {fileID: 6980001116275478327}
   playerMove: {fileID: 5331263841689348790}
+  playerInventory: {fileID: 7067313152492972070}
 --- !u!114 &3925980946327110418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +360,7 @@ MonoBehaviour:
   animator: {fileID: 4810009607156666958}
   thrower: {fileID: 6980001116275478327}
   playerMove: {fileID: 5331263841689348790}
+  playerInventory: {fileID: 0}
 --- !u!54 &1008752949380513570
 Rigidbody:
   m_ObjectHideFlags: 0

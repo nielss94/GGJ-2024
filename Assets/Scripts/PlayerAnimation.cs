@@ -8,6 +8,7 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Thrower thrower;
     [SerializeField] private PlayerMove playerMove;
+    [SerializeField] private PlayerInventory playerInventory;
     private void Awake()
     {
         thrower.OnStartAim += () =>
@@ -32,6 +33,16 @@ public class PlayerAnimation : MonoBehaviour
             animator.SetBool("Throw", true);
             
             StartCoroutine(SetAfterSeconds(0.5f, "Throw", false));
+        };
+        
+        playerInventory.OnHoldSnack += () =>
+        {
+            animator.SetLayerWeight(1, 1);
+        };
+        
+        playerInventory.OnReleaseSnack += () =>
+        {
+            animator.SetLayerWeight(1, 0);
         };
     }
 
