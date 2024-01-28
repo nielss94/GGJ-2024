@@ -50,14 +50,14 @@ public class CustomerOrder : MonoBehaviour
         {
             Debug.Log("Order correct");
             OnOrderCorrect();
-            if (orderCorrectSounds.Length > 0) audioManager.PlayClip(orderCorrectSounds[Random.Range(0, orderCorrectSounds.Length)], transform.position, 1f, true, 0.2f);
+            if (orderCorrectSounds.Length > 0) audioManager.PlayClip(orderCorrectSounds[Random.Range(0, orderCorrectSounds.Length)], AudioType.SFX, transform.position, 1f, true, 0.2f);
             customer.Angry();
         }
         else
         {
             Debug.Log("Order incorrect");
             OnOrderIncorrect();
-            if (orderIncorrectSounds.Length > 0) audioManager.PlayClip(orderIncorrectSounds[Random.Range(0, orderIncorrectSounds.Length)], transform.position, 1f, true, 0.2f);
+            if (orderIncorrectSounds.Length > 0) audioManager.PlayClip(orderIncorrectSounds[Random.Range(0, orderIncorrectSounds.Length)], AudioType.SFX, transform.position, 1f, true, 0.2f);
         }
     }
 
@@ -71,7 +71,7 @@ public class CustomerOrder : MonoBehaviour
         if (timerFill.fillAmount >= 1f && !customer.angry)
         {
             customer.Angry();
-            if (orderIncorrectSounds.Length > 0) audioManager.PlayClip(angrySounds[Random.Range(0, orderIncorrectSounds.Length)], transform.position, 1f, true, 0.2f);
+            if (orderIncorrectSounds.Length > 0) audioManager.PlayClip(angrySounds[Random.Range(0, orderIncorrectSounds.Length)], AudioType.SFX, transform.position, 1f, true, 0.2f);
         }
     }
 
@@ -85,7 +85,7 @@ public class CustomerOrder : MonoBehaviour
             // Snack hit body, bad!
             Debug.Log("Order incorrect");
             OnOrderIncorrect();
-            if (orderIncorrectSounds.Length > 0) audioManager.PlayClip(orderIncorrectSounds[Random.Range(0, orderIncorrectSounds.Length)], transform.position, 1f, true, 0.2f);
+            if (orderIncorrectSounds.Length > 0) audioManager.PlayClip(orderIncorrectSounds[Random.Range(0, orderIncorrectSounds.Length)], AudioType.SFX, transform.position, 1f, true, 0.2f);
             Destroy(projectile.gameObject);    
         }
     }
