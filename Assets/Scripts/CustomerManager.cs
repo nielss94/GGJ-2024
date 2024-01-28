@@ -13,11 +13,13 @@ public class CustomerManager : MonoBehaviour
     public List<Customer> customers = new List<Customer>();
     public Customer customerPrefab;
     public AudioClip[] customerSpawnSound;
+    public AudioClip[] customerLaughSounds;
     
     private float minSpawnInterval = 5f;
     private float maxSpawnInterval = 10f;
     private float lastSpawnTime;
     private LevelProgressionManager levelProgressionManager;
+    
     
     private void Start()
     {
@@ -51,5 +53,25 @@ public class CustomerManager : MonoBehaviour
         OnCustomerSpawned(customer);
         AudioManager.Instance.PlayClip(customerSpawnSound[Random.Range(0, customerSpawnSound.Length)], customerSpawnPoint.position, 1f, true, 0.2f);
     }
-    
+
+    public void Haha()
+    {
+        StartCoroutine(PlayLaughs());
+    }
+
+    private IEnumerator PlayLaughs()
+    {
+        int randomCustomer = Random.Range(0, Mathf.Min(6, customers.Count));
+        for (int i = 0; i < randomCustomer; i++)
+        {
+            yield return new WaitForSeconds(0.05f);
+            if (customerLaughSounds.Length > 0) AudioManager.Instance.PlayClip(customerLaughSounds[Random.Range(0, customerLaughSounds.Length)], customers[i].transform.position, 1f, true, 0.2f);
+        }
+    }
+
+    public void CustomerExit(Customer customer)
+    {
+        customers.Remove(customer);
+        Destroy(customer.gameObject);
+    }
 }
