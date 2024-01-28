@@ -70,6 +70,7 @@ public class PlayerInteraction : MonoBehaviour
                         playerInventory.TakeFriedSnack(fridge.snackType);
                     }
                     
+                    
                     OnLookAtInteraction(fridge.gameObject);
                 }
                 else
