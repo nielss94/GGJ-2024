@@ -17189,7 +17189,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: faf4c31ec5cfd4441b9cac71a4fba2a7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.094
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: faf4c31ec5cfd4441b9cac71a4fba2a7,
         type: 3}
@@ -17231,34 +17231,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: faf4c31ec5cfd4441b9cac71a4fba2a7,
-        type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 3d43b8757b4601442890a7238803d495, type: 2}
-    - target: {fileID: -7511558181221131132, guid: faf4c31ec5cfd4441b9cac71a4fba2a7,
-        type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 697f26c5171ced342bd0d83c4686d6cd, type: 2}
     - target: {fileID: 919132149155446097, guid: faf4c31ec5cfd4441b9cac71a4fba2a7,
         type: 3}
       propertyPath: m_Name
       value: Trash Can (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: faf4c31ec5cfd4441b9cac71a4fba2a7,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: faf4c31ec5cfd4441b9cac71a4fba2a7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8527067060044753608}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faf4c31ec5cfd4441b9cac71a4fba2a7, type: 3}
 --- !u!4 &1160239870543835160 stripped
 Transform:
@@ -17266,33 +17247,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1698061013099730931}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1968583963260938914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: faf4c31ec5cfd4441b9cac71a4fba2a7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1698061013099730931}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &8527067060044753608
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968583963260938914}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.3346627, y: 1.3309923, z: 1.727857}
-  m_Center: {x: 0.00000029802337, y: -0.00000040648234, z: 0.8639283}
 --- !u!1001 &1887365463931525007
 PrefabInstance:
   m_ObjectHideFlags: 0
