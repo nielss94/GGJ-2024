@@ -43,6 +43,11 @@ public class InteractionUI : MonoBehaviour
                 interactionText.text = "";
             }
         }
+        else if (gameObject.TryGetComponent(out Fridge fridge))
+        {
+            interactionImage.enabled = true;
+            interactionText.text = $"{fridge.snackType}";
+        }
         else
         {
             interactionImage.enabled = false;

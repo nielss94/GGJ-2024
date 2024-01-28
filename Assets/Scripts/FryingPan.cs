@@ -85,5 +85,6 @@ public class FryingPan : MonoBehaviour
         currentSnack = null;
         canvas.gameObject.SetActive(false);
         audioSource.Pause();
+        snackReady = false;
     }
 }
