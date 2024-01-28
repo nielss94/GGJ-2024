@@ -21,11 +21,18 @@ public class CustomerOrder : MonoBehaviour
     [SerializeField] private Color endColor = Color.red;
     [SerializeField] private AudioClip[] orderCorrectSounds;
     [SerializeField] private AudioClip[] orderIncorrectSounds;
+    [SerializeField] private AudioClip[] angrySounds;
     
     private Camera mainCamera;
     private float startTime;
     private AudioManager audioManager;
-    
+    private Customer customer;
+
+    private void Awake()
+    {
+        customer = GetComponent<Customer>();
+    }
+
     private void Start()
     {
         Array values = Enum.GetValues(typeof(SnackType));
@@ -44,6 +51,7 @@ public class CustomerOrder : MonoBehaviour
             Debug.Log("Order correct");
             OnOrderCorrect();
             if (orderCorrectSounds.Length > 0) audioManager.PlayClip(orderCorrectSounds[Random.Range(0, orderCorrectSounds.Length)], transform.position, 1f, true, 0.2f);
+            customer.Angry();
         }
         else
         {
@@ -59,10 +67,17 @@ public class CustomerOrder : MonoBehaviour
         canvas.transform.LookAt(mainCamera.transform);
         timerFill.fillAmount = (Time.time - startTime) / patienceTimeSeconds;
         timerFill.color = Color.Lerp(startColor, endColor, timerFill.fillAmount);
+        
+        if (timerFill.fillAmount >= 1f && !customer.angry)
+        {
+            customer.Angry();
+            if (orderIncorrectSounds.Length > 0) audioManager.PlayClip(angrySounds[Random.Range(0, orderIncorrectSounds.Length)], transform.position, 1f, true, 0.2f);
+        }
     }
 
     private void OnCollisionEnter(Collision other)
     {
+        if (customer.angry) return;
         if (other.gameObject.TryGetComponent(out Projectile projectile))
         {
             if (projectile.isFrozen) return;

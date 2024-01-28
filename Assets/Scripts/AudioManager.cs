@@ -7,12 +7,31 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance { get; private set; }
 
     [SerializeField] private AudioSource audioSourcePrefab;
-
+    
+    [SerializeField] private AudioClip[] ostClips;
+    
+    private AudioSource ostAudioSource;
+    
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            ostAudioSource = GetComponent<AudioSource>();
+            
+            StartCoroutine(PlayOst());
+        }
+    }
+
+    private IEnumerator PlayOst()
+    {
+        while (true)
+        {
+            ostAudioSource.clip = ostClips[Random.Range(0, ostClips.Length)];
+            ostAudioSource.Play();
+            yield return new WaitForSeconds(ostAudioSource.clip.length);
         }
     }
 

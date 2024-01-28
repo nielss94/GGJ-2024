@@ -485,7 +485,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0.381
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -674,8 +674,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3856387, y: 1.0309254, z: 1.2410127}
-  m_Center: {x: -0.06096542, y: 0.015462697, z: 0.120506346}
+  m_Size: {x: 1.6518568, y: 1.0309254, z: 1.2410127}
+  m_Center: {x: 0.072143614, y: 0.015462697, z: 0.120506346}
 --- !u!114 &193217013217530106
 MonoBehaviour:
   m_ObjectHideFlags: 0

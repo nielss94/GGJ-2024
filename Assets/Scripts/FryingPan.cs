@@ -57,7 +57,7 @@ public class FryingPan : MonoBehaviour
             
             fryingImage.fillAmount = 0f;
             snackImage.sprite = snackOptions.Find(x => x.snackType == currentSnackType).sprite;
-            
+            audioSource.Play();
         }
     }
 
@@ -84,5 +84,6 @@ public class FryingPan : MonoBehaviour
         Destroy(currentSnack);
         currentSnack = null;
         canvas.gameObject.SetActive(false);
+        audioSource.Pause();
     }
 }
